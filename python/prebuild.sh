@@ -11,4 +11,11 @@ echo "Running indexer"
 python ../python/index_builder.py
 
 echo ""
+echo "Cleaning extraneous files before S3 deploy"
+rm ./python/*
+rm README.md
+rm LICENSE
+rmdir python
+
+echo ""
 echo "#### DEPLOY COMPLETE"
