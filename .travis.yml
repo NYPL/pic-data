@@ -7,10 +7,6 @@ install:
 - pip install -r ./python/requirements.txt
 script:
 - "./python/prebuild.sh"
-env:
-  global:
-  - GH_REPO="nypl/pic-app"
-  - secure: CIy/aewuNg9sbAS92RxsWEIvgaTr8nyFFQbRkTlXsK7w+HKVPjSQiBd3x8kqkRoL0qM1+gsGQIf5h5yjWwiLqj4mCPDIjG1WOcS7xUgEPBrnjVs5tNNy9KgmabAgSA/PwCoGG+edsVeCxISW7UE86YOam5A9eOGVmVxuu4WxfPVi4KUTAvu/yiLuuDUikVEhVE17eF02PP6tiLU/9ahgHyJ6g3+EA/Imn2zFaF88p2lYXCqmqqPi+q+OS/zRUQWDh/a7TplV7maPUJOd7sQaMzKoGXr8C0LUyO4zmf5oA0xonh+go6Lh+cfPG+Aao3l/cG1FdBBT4ZOWCteqlXhYmkEG9DspSHTtdj1ZdYEl+V7wCpT+RfjWDi8jQbjzjNIYirDPqY8/BY/JlpIRWvXscUdViNZaS8D11mhdrAHWJqzMxoBeRhZV89GXY0XwILodbnRPtCRea7Ob9TiUw1eHrPd4phg7PY7Z6ca4etW2Txli+qT0v85IRsX2vydKYWlFp8ZpxUBoGjbs5RkNZv8qiyNsRuY7JmH+iPZPwjKpl7oJvuwEmDXBI8gihBTwbVW7qvXDuUvvzz764sk2VrUzDLEzCMz3bwL/7MSxbNcJmFccuOa49lBhZOLWXczxGepjbJ5j6u4ufQ/S/wsbRonthycFz2kxFelGAEGUDqQHmuQ=
 notifications:
   email: false
   slack:
