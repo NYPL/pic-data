@@ -39,9 +39,9 @@ git add public/assets/csv
 
 git commit -m ":rocket: new deploy from travis-ci"
 
-# echo ""
-# echo "Running indexer"
-# python ../python/index_builder.py
+echo ""
+echo "Running indexer"
+python ../python/index_builder.py
 
 echo ""
 echo "Push to update app repo"
