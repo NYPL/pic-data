@@ -24,8 +24,13 @@ cd _cloned
 
 echo ""
 echo "Add the new files"
+echo "Before:"
+ls ./public/assets/csv
 cp ../csv/*.txt ./public/assets/csv
 cp ../csv/*.csv ./public/assets/csv
+echo ""
+echo "After:"
+ls ./public/assets/csv
 
 echo ""
 echo "Status"
@@ -37,10 +42,10 @@ git add public/assets/csv
 
 git commit -m ":rocket: new deploy from travis-ci"
 
-echo ""
-echo "Running indexer"
-cd ..
-python ./python/index_builder.py
+# echo ""
+# echo "Running indexer"
+# cd ..
+# python ./python/index_builder.py
 
 echo ""
 echo "Push to update app repo"
