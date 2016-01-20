@@ -8,13 +8,8 @@ export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
 git config --global user.name "travis-bot"
 git config --global user.email "travis"
 
-#####
-
-# create text files
 echo "Creating text files"
 python ./python/data_converter.py
-
-#####
 
 echo ""
 echo "Clone the app repo"
@@ -44,8 +39,7 @@ git commit -m ":rocket: new deploy from travis-ci"
 
 # echo ""
 # echo "Running indexer"
-# cd ..
-# python ./python/index_builder.py
+# python ../python/index_builder.py
 
 echo ""
 echo "Push to update app repo"
