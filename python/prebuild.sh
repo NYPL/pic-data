@@ -17,15 +17,17 @@ git clone $REPO_URL _cloned
 
 cd _cloned
 
+git remote add origin $REPO_URL
+
 echo ""
 echo "Add the new files"
 echo "Before:"
-ls ./public/assets/csv
+ls -lh ./public/assets/csv
 cp ../csv/*.txt ./public/assets/csv
 cp ../csv/*.csv ./public/assets/csv
 echo ""
 echo "After:"
-ls ./public/assets/csv
+ls -lh ./public/assets/csv
 
 echo ""
 echo "Status"
