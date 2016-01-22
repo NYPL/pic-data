@@ -12,7 +12,10 @@ class Constituent(DocType):
     ConstituentID = String()
     DisplayName = String(analyzer=accent_analyzer)
     DisplayDate = String()
-    AlphaSort = String()
+    AlphaSort = String(
+        analyzer=accent_analyzer,
+        fields={'raw': String(index='not_analyzed')}
+    )
     Nationality = String()
     BeginDate = String()
     EndDate = String()
