@@ -30,6 +30,7 @@ class Constituent(DocType):
             'ConAddressID' : String(),
             'ConstituentID' : String(),
             'AddressTypeID' : String(),
+            'AddressType' : String(),
             'DisplayName2' : String(),
             'StreetLine1' : String(),
             'StreetLine2' : String(),
@@ -37,6 +38,7 @@ class Constituent(DocType):
             'City' : String(),
             'State' : String(),
             'CountryID' : String(),
+            'Country' : String(),
             'BeginDate' : String(),
             'EndDate' : String(),
             'Remarks' : String()
@@ -46,6 +48,7 @@ class Constituent(DocType):
     biography = Object(
         properties={
             'TermID' : String(),
+            'Term' : String(),
             'URL' : String()
         }
     )
@@ -53,31 +56,36 @@ class Constituent(DocType):
     collection = Object(
         properties={
             'TermID' : String(),
+            'Term' : String(),
             'URL' : String()
         }
     )
 
     format = Object(
         properties={
-            'TermID' : String()
+            'TermID' : String(),
+            'Term' : String()
         }
     )
 
     gender = Object(
         properties={
-            'TermID' : String()
+            'TermID' : String(),
+            'Term' : String()
         }
     )
 
     process = Object(
         properties={
-            'TermID' : String()
+            'TermID' : String(),
+            'Term' : String()
         }
     )
 
     role = Object(
         properties={
-            'TermID' : String()
+            'TermID' : String(),
+            'Term' : String()
         }
     )
 
