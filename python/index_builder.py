@@ -119,10 +119,10 @@ def process_constituents():
     #     es.indices.delete_mapping(index=index, doc_type=document_type)
     # except:
     #     pass
-    # myindex.settings(
-    #     number_of_shards=5,
-    #     number_of_replicas=2
-    # )
+    myindex.settings(
+        number_of_shards=5,
+        number_of_replicas=2
+    )
     myindex.create()
     actions = [build_action(value, index, document_type) for key, value in constituents.iteritems()]
     es = Elasticsearch([endpoint])
