@@ -1,7 +1,7 @@
 import csv
 import re
 
-from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer, Long
+from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer, Long, GeoPoint
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
@@ -41,7 +41,8 @@ class Constituent(DocType):
             'Country' : String(),
             'BeginDate' : String(),
             'EndDate' : String(),
-            'Remarks' : String()
+            'Remarks' : String(),
+            'Location' : GeoPoint()
         }
     )
 

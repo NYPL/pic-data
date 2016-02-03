@@ -94,7 +94,9 @@ def process_constituents():
             if 'Remarks' in row:
                 row['Remarks'] = Converter.convert_whitespace(row['Remarks'])
                 if location_pattern.match(row['Remarks']):
-                    row['Remarks'] = ",".join(Converter.compress_address(row['Remarks']))
+                    latlon = Converter.compress_address(row['Remarks'])
+                    row['Remarks'] = ",".join(latlon)
+                    row['Location'] = { "lat" : latlon[0], "lon" : latlon[1] }
             constituents[cid][table].append(row)
         counter = counter + 1
     # now sort addresses
