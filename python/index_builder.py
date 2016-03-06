@@ -96,7 +96,7 @@ def process_constituents():
                 if location_pattern.match(row['Remarks']):
                     latlon = Converter.compress_address(row['Remarks'])
                     row['Remarks'] = ",".join(latlon)
-                    row['Location'] = { "lat" : latlon[0], "lon" : latlon[1] }
+                    row['Location'] = { "lat" : float(latlon[0]), "lon" : float(latlon[1]) }
             constituents[cid][table].append(row)
         counter = counter + 1
     # now sort addresses
@@ -110,7 +110,7 @@ def process_constituents():
     # now on to elastic
     index = 'pic'
     document_type = 'constituent'
-    connections.connections.create_connection(hosts=[endpoint], timeout=240)
+    connections.connections.create_connection(hosts=[endpoint], timeout=360)
     myindex = Index(index)
     myindex.doc_type(Constituent)
     try:
@@ -127,7 +127,7 @@ def process_constituents():
     )
     myindex.create()
     actions = [build_action(value, index, document_type) for key, value in constituents.iteritems()]
-    es = Elasticsearch([endpoint])
+    es = Elasticsearch([endpoint], timeout=30, max_retries=10, retry_on_timeout=True)
     helpers.bulk(es, actions)
     return constituents
 
