@@ -10,7 +10,7 @@ See also the [PIC application repository](//github.com/nypl/pic-app).
 
 ### CSV files
 
-Found in the [`/csv` folder](csv/)
+These files are found in the [`/csv`](csv/) folder.
 
 [Address.csv](csv/Address.csv) contains locations of Birth, Death and Activity, and street addresses for Studios. All have geographic coordinates. [Addresstypes.csv](csv/Addresstypes.csv) describes the Addresses as either, Birth, Death, Active or Studio.
 
