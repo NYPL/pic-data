@@ -9,24 +9,27 @@ The data itself is in the [`/csv` folder](csv/) and is described below. The [Pyt
 See also the [PIC application repository](//github.com/nypl/pic-app).
 
 ### CSV files
-Address.csv contains locations of Birth, Death and Activity, and street addresses for Studios. All have geographic coordinates. Addresstypes.csv describes the Addresses as either, Birth, Death, Active or Studio.
 
-Biography.csv lists the source or sources from which an entry is derived. Biographies.csv is a complete list of the sources.
-Collection.csv lists which museums or libraries are known to have works by a photographer. Collections.csv is a complete list of the museums and libraries. More collections will be added periodically.
+_Found in the [`/csv` folder](csv/)_
 
-Constituents.csv contains the Names, Nationalities, and Dates for over 115,000 photographers, studios and others in PIC. ConstituentType indicates whether the entry is for an Individual (1) or an Institution (2). Some have a biographical TextEntry, which will display in future iterations of PIC.
+[Address.csv](csv/Address.csv) contains locations of Birth, Death and Activity, and street addresses for Studios. All have geographic coordinates. [Addresstypes.csv](csv/Addresstypes.csv) describes the Addresses as either, Birth, Death, Active or Studio.
 
-Countries.csv is the full list of countries found in Address.csv.
+[Biography.csv](csv/Biography.csv) lists the source or sources from which an entry is derived. [Biographies.csv](csv/Biographies.csv) is a complete list of the sources.
+[Collection.csv](csv/Collection.csv) lists which museums or libraries are known to have works by a photographer. [Collections.csv](csv/Collections.csv) is a complete list of the museums and libraries. More collections will be added periodically.
 
-Format.csv lists which types of photographs (such as Stereoscopic Photographs or Cabinet Cards) a photographer was known to have made. Formats.csv is a list of those formats currently tracked in PIC. Additional formats may be added in the future.
+[Constituents.csv](csv/Constituents.csv) contains the Names, Nationalities, and Dates for over 115,000 photographers, studios and others in PIC. ConstituentType indicates whether the entry is for an Individual (1) or an Institution (2). Some have a biographical TextEntry, which will display in future iterations of PIC.
 
-Gender.csv indicates whether a constituent is Female, Male, Other gender, or is a Studio (No Gender). Genders.csv lists those four options.
+[Countries.csv](csv/Countries.csv) is the full list of countries found in [Address.csv](csv/Address.csv).
 
-Nationality.csv gives the Nationality for each constituent. Nationality is often presumed from the location(s) where the bulk of a photographer's or studio's work was produced, and does not necessarily reflect citizenship status. Nationalities.csv is the full list of Nationalities.
+[Format.csv](csv/Format.csv) lists which types of photographs (such as Stereoscopic Photographs or Cabinet Cards) a photographer was known to have made. [Formats.csv](csv/Formats.csv) is a list of those formats currently tracked in PIC. Additional formats may be added in the future.
 
-Process.csv lists which photographic processes a constituent is known to have used (ie. Albumen Silver Prints or Gelatin Silver Prints). Processes.csv is the full list of processes currently tracked in PIC. Other processes will be added periodically.
+[Gender.csv](csv/Gender.csv) indicates whether a constituent is Female, Male, Other gender, or is a Studio (No Gender). [Genders.csv](csv/Genders.csv) lists those four options.
 
-Role.csv indicates whether a Constituent was a Photographer, Manufacturer, Dealer of Photographic Supplies or other occupation within the discipline of photography. Roles.csv is the full list of Roles currently tracked in PIC. Other roles may be added periodically.
+[Nationality.csv](csv/Nationality.csv) gives the Nationality for each constituent. Nationality is often presumed from the location(s) where the bulk of a photographer's or studio's work was produced, and does not necessarily reflect citizenship status. [Nationalities.csv](csv/Nationalities.csv) is the full list of Nationalities.
+
+[Process.csv](csv/Process.csv) lists which photographic processes a constituent is known to have used (ie. Albumen Silver Prints or Gelatin Silver Prints). [Processes.csv](csv/Processes.csv) is the full list of processes currently tracked in PIC. Other processes will be added periodically.
+
+[Role.csv](csv/Role.csv) indicates whether a Constituent was a Photographer, Manufacturer, Dealer of Photographic Supplies or other occupation within the discipline of photography. [Roles.csv](csv/Roles.csv) is the full list of Roles currently tracked in PIC. Other roles may be added periodically.
 
 
 ## License
