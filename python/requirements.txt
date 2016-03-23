@@ -1,2 +1,4 @@
 elasticsearch>=1.0.0,<2.0.0
 elasticsearch-dsl<2.0.0
+scipy==0.17.0
+numpy

@@ -164,3 +164,19 @@ class Converter:
         if (died):
             sortedaddresses.append(died)
         return sortedaddresses
+
+    @staticmethod
+    def str_to_float(x):
+        """
+        Convert a string to a float (with some caveats)
+
+        Returns a float or -1 if unable
+        """
+        try:
+            if x=='': return 0.0
+            if x=='false': return 0.0
+            if x=='true': return 1.0
+            return float(x)
+        except:
+            return -1
+            # print("[{x}] is not a float".format(x=x))
