@@ -17,7 +17,7 @@ def generate_base_locations():
     """
     basepath = os.environ['BASEPATH']
     response = open(basepath+'address.csv')
-    print "loaded " + basepath + "address.csv"
+    print "\n\nloaded " + basepath + "address.csv"
     reader = csv.DictReader(response)
     location_pattern = re.compile("(\-?\d+(\.\d+)?)\s*,\s*(\-?\d+(\.\d+)?).*")
     places = []
@@ -72,13 +72,13 @@ def generate_base_locations():
         places.extend(address)
     locations = "[\"constituents\", [" + ",".join(places) + "]]"
     output = basepath+'latlons.txt'
-    print "wrote " + output
+    print "\nwrote " + output
     text_file = open(output, "w")
     text_file.write(locations)
     text_file.close()
     locations = "[\"heights\", [" + ",".join(heights) + "]]"
     output = basepath+'heights.txt'
-    print "wrote " + output
+    print "\nwrote " + output
     text_file = open(output, "w")
     text_file.write(locations)
     text_file.close()

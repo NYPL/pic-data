@@ -58,7 +58,11 @@ def process_constituents():
     except KeyError:
         pass
     print protocol
-    endpoint = protocol + os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@" + os.environ['ENDPOINT']
+    try:
+        endpoint = protocol + os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@" + os.environ['ENDPOINT']
+    except KeyError:
+        print "\n\nNo environment variables set! (possible pull request)\n"
+        return
     constituents = create_base_constituents()
     counter = 0
     tables = ["format","biography","address","gender","process","role","collection"]
@@ -111,8 +115,8 @@ def process_constituents():
             constituents[cid]['address'] = Converter.sort_addresses(constituents[cid]['address'])
             constituents[cid]['addressTotal'] = len(constituents[cid]['address'])
     end = timeit.default_timer()
-    print "Processed CSVs in " + str(end - start) + " seconds"
-    print "Indexing..."
+    print "\n\nProcessed CSVs in " + str(end - start) + " seconds\n"
+    print "\n\nIndexing...\n"
     # now on to elastic
     index = 'pic'
     document_type = 'constituent'
