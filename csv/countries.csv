@@ -1,242 +1,242 @@
-﻿CountryID,Country
-433,Aegean Sea
-87,Afghanistan
-127,Africa (general)
-318,Albania
-38,Algeria
-322,Angola
-152,Antarctica
-154,Antigua and Barbuda
-132,Arctic regions
-43,Argentina
-96,Armenia
-324,Aruba
-131,Asia (general)
-428,Atlantic Ocean
-37,Australia
-2,Austria
-97,Austria-Hungary
-328,Azerbaijan
-150,Bahamas
-329,Bahrain
-155,Bangladesh
-149,Barbados
-439,Barents Sea
-332,Belarus
-98,Belgian Congo
-16,Belgium
-88,Belize
-333,Benin
-94,Bermuda
-99,Bohemia
-100,Bolivia
-426,Borneo
-101,Bosnia
-335,Bosnia and Herzegovina
-156,Botswana
-18,Brazil
-93,British Guiana
-157,Brunei
-102,Bulgaria
-158,Burkina Faso
-159,Cambodia
-160,Cameroon
-10,Canada
-161,Cayman Islands
-162,Central African Republic
-429,Ceylon
-343,Chad
-65,Chile
-53,China
-44,Colombia
-347,Comoros
-348,Cook Islands
-41,Costa Rica
-135,Cote d'Ivoire
-141,Crimea
-77,Croatia
-23,Cuba
-350,Curaçao
-164,Cyprus
-36,Czech Republic
-51,Czechoslovakia
-163,Democratic Republic of the Congo (Congo-Kinshasa)
-20,Denmark
-165,Dominica
-137,Dominican Republic
-146,East Indies
-89,Ecuador
-50,Egypt
-116,El Salvador
-12,England
-166,Equatorial Guinea
-167,Eritrea
-79,Estonia
-68,Ethiopia
-128,Europe (general)
-168,Falkland Islands
-104,Fiji
-42,Finland
-9,France
-66,French Polynesia
-169,Gabon
-170,Gambia
-52,Georgia
-3,Germany
-171,Ghana
-139,Gibraltar
-35,Granada
-67,Great Britain
-57,Greece
-74,Greenland
-172,Grenada
-78,Guatemala
-145,Guernsey
-358,Guinea
-173,Guyana
-56,Haiti
-174,Holy See
-175,Honduras
-362,Hong Kong
-25,Hungary
-105,Iceland
-21,India
-54,Indonesia
-106,Iran
-107,Iraq
-24,Ireland
-147,Isle of Man
-49,Israel
-4,Italy
-45,Jamaica
-5,Japan
-33,Java
-148,Jersey
-69,Jordan
-367,Kazakhstan
-58,Kenya
-176,Kiribati
-138,Kosovo
-369,Kuwait
-370,Kyrgyzstan
-108,Laos
-109,Latvia
-64,Lebanon
-177,Lesotho
-80,Liberia
-59,Libya
-110,Liechtenstein
-61,Lithuania
-111,Luxembourg
-372,Macedonia
-126,Madagascar
-178,Malawi
-84,Malaysia
-179,Mali
-47,Malta
-374,Marshall Islands
-90,Martinique
-180,Mauritius
-11,Mexico
-133,Middle East (general)
-73,Monaco
-379,Mongolia
-380,Montenegro
-181,Montserrat
-134,Moravia
-48,Morocco
-182,Mozambique
-72,Myanmar
-183,Namibia
-434,Navajo Nation
-143,Nepal
-39,Netherlands
-184,New Caledonia
-46,New Zealand
-112,Nicaragua
-113,Nigeria
-386,Norfolk Island
-32,North Ireland
-185,North Korea
-435,Northern Ireland
-22,Norway
-431,Outer Space
-440,Pacific Ocean
-114,Pakistan
-390,Palau
-91,Palestine
-60,Panama
-186,Papua New Guinea
-391,Paraguay
-29,Peru
-28,Philippines
-13,Poland
-17,Portugal
-136,Prussia
-115,Puerto Rico
-438,Red Sea
-71,Republic of Croatia
-396,Republic of the Congo (Congo-Brazzaville)
-81,Romania
-27,Russia
-187,Rwanda
-188,Saint Helena
-189,Saint Kitts and Nevis
-401,Saint Lucia
-403,Saint Pierre and Miquelon
-190,Saint Vincent and the Grenadines
-191,Samoa
-404,San Marino
-117,Saudi Arabia
-26,Scotland
-118,Senegal
-119,Serbia
-192,Sierra Leone
-427,Silesia
-76,Singapore
-120,Slovakia
-121,Slovenia
-193,Solomon Islands
-194,Somalia
-19,South Africa
-130,South America (general)
-122,South Korea
-437,Soviet Union
-14,Spain
-15,Sri Lanka
-144,Sudan
-414,Suriname
-195,Swaziland
-31,Sweden
-8,Switzerland
-86,Syria
-83,Tahiti
-7,"Taiwan, ROC"
-95,Tanzania
-6,Thailand
-432,The Moon
-142,Tibet
-196,Togo
-197,Tonga
-151,Trinidad and Tobago
-70,Tunisia
-30,Turkey
-82,Turkmenistan
-420,Turks and Caicos Islands
-422,U.S. Virgin Islands
-153,Uganda
-34,Ukraine
-430,Unknown
-63,Uruguay
-1,USA
-123,Uzbekistan
-198,Vanuatu
-62,Venezuela
-124,Vietnam
-40,Wales
-140,West Indies
-199,Yemen
-125,Yugoslavia
-200,Zambia
-92,Zanzibar
-55,Zimbabwe
+Country,﻿CountryID,WOFID
+Aegean Sea,433,404528945
+Afghanistan,87,85632229
+Africa (general),127,102191573
+Albania,318,85632405
+Algeria,38,85632451
+Angola,322,85632281
+Antarctica,152,85632715
+Antigua and Barbuda,154,85632529
+Arctic regions,132,-1
+Argentina,43,85632505
+Armenia,96,85632773
+Aruba,324,85632295
+Asia (general),131,102191569
+Atlantic Ocean,428,-1
+Australia,37,102191583
+Austria,2,85632785
+Austria-Hungary,97,-1
+Azerbaijan,328,85632717
+Bahamas,150,85632339
+Bahrain,329,85632167
+Bangladesh,155,85632475
+Barbados,149,85632491
+Barents Sea,439,404528797
+Belarus,332,85632395
+Belgian Congo,98,-1
+Belgium,16,85632997
+Belize,88,85632571
+Benin,333,85632247
+Bermuda,94,85632731
+Bohemia,99,-1
+Bolivia,100,85632623
+Borneo,426,-1
+Bosnia,101,85632609
+Bosnia and Herzegovina,335,85632609
+Botswana,156,85632235
+Brazil,18,85633009
+British Guiana,93,-1
+Brunei,157,85632749
+Bulgaria,102,85633001
+Burkina Faso,158,85632213
+Cambodia,159,85632359
+Cameroon,160,85632245
+Canada,10,85633041
+Cayman Islands,161,85632611
+Central African Republic,162,85632391
+Ceylon,429,85632313
+Chad,343,85632325
+Chile,65,85633057
+China,53,85632695
+Colombia,44,85632519
+Comoros,347,85632259
+Cook Islands,348,85632481
+Costa Rica,41,85632487
+Cote d'Ivoire,135,85632449
+Crimea,141,-1
+Croatia,77,85633229
+Cuba,23,85632675
+Curaçao,350,85632441
+Cyprus,164,85632437
+Czech Republic,36,85633105
+Czechoslovakia,51,-1
+Democratic Republic of the Congo (Congo-Kinshasa),163,85632643
+Denmark,20,85633121
+Dominica,165,85632503
+Dominican Republic,137,85632713
+East Indies,146,-1
+Ecuador,89,85632261
+Egypt,50,85632581
+El Salvador,116,85632545
+England,12,85633159
+Equatorial Guinea,166,85632287
+Eritrea,167,85632781
+Estonia,79,85633135
+Ethiopia,68,85632257
+Europe (general),128,102191581
+Falkland Islands,168,85632211
+Fiji,104,85632755
+Finland,42,85633143
+France,9,85633147
+French Polynesia,66,85632653
+Gabon,169,85632407
+Gambia,170,85632603
+Georgia,52,85633163
+Germany,3,85633111
+Ghana,171,85632189
+Gibraltar,139,85633167
+Granada,35,85632335
+Great Britain,67,85633159
+Greece,57,85633171
+Greenland,74,85633217
+Grenada,172,85632335
+Guatemala,78,85632385
+Guernsey,145,85632547
+Guinea,358,85632691
+Guyana,173,85632397
+Haiti,56,85632433
+Holy See,174,85632187
+Honduras,175,85632323
+Hong Kong,362,85632483
+Hungary,25,85633237
+Iceland,105,85633249
+India,21,85632469
+Indonesia,54,85632203
+Iran,106,85632361
+Iraq,107,85632191
+Ireland,24,85633241
+Isle of Man,147,-1
+Israel,49,85632315
+Italy,4,85633253
+Jamaica,45,85632215
+Japan,5,85632429
+Java,33,-1
+Jersey,148,85632593
+Jordan,69,85632425
+Kazakhstan,367,85632307
+Kenya,58,85632329
+Kiribati,176,85632709
+Kosovo,138,85633259
+Kuwait,369,85632401
+Kyrgyzstan,370,85632761
+Laos,108,85632241
+Latvia,109,85633279
+Lebanon,64,85632533
+Lesotho,177,85632173
+Liberia,80,85632249
+Libya,59,85632627
+Liechtenstein,110,85633267
+Lithuania,61,85633269
+Luxembourg,111,85633275
+Macedonia,372,85632373
+Madagascar,126,85632223
+Malawi,178,85632383
+Malaysia,84,85632739
+Mali,179,85632553
+Malta,47,85633331
+Marshall Islands,374,85632663
+Martinique,90,85632531
+Mauritius,180,85632357
+Mexico,11,85633293
+Middle East (general),133,-1
+Monaco,73,85633285
+Mongolia,379,85632439
+Montenegro,380,85632667
+Montserrat,181,85632677
+Moravia,134,-1
+Morocco,48,85632693
+Mozambique,182,85632729
+Myanmar,72,85632181
+Namibia,183,85632535
+Navajo Nation,434,-1
+Nepal,143,85632465
+Netherlands,39,85633337
+New Caledonia,184,85632473
+New Zealand,46,85633345
+Nicaragua,112,85632599
+Nigeria,113,85632735
+Norfolk Island,386,85632517
+North Ireland,32,-1
+North Korea,185,85632639
+Northern Ireland,435,-1
+Norway,22,85633341
+Outer Space,431,-1
+Pacific Ocean,440,-1
+Pakistan,114,85632659
+Palau,390,85632331
+Palestine,91,85633739
+Panama,60,85632179
+Papua New Guinea,186,85632347
+Paraguay,391,85632355
+Peru,29,85632521
+Philippines,28,85632509
+Poland,13,85633723
+Portugal,17,85633735
+Prussia,136,-1
+Puerto Rico,115,85633729
+Red Sea,438,404528759
+Republic of Croatia,71,85633229
+Republic of the Congo (Congo-Brazzaville),396,85632541
+Romania,81,85633745
+Russia,27,85632685
+Rwanda,187,85632303
+Saint Helena,188,85632485
+Saint Kitts and Nevis,189,85632551
+Saint Lucia,401,85632369
+Saint Pierre and Miquelon,403,85632371
+Saint Vincent and the Grenadines,190,85632569
+Samoa,191,85632681
+San Marino,404,85633763
+Saudi Arabia,117,85632253
+Scotland,26,85633159
+Senegal,118,85632365
+Serbia,119,85633755
+Sierra Leone,192,85632467
+Silesia,427,-1
+Singapore,76,85632605
+Slovakia,120,85633769
+Slovenia,121,85633779
+Solomon Islands,193,85632591
+Somalia,194,85632379
+South Africa,19,85633813
+South America (general),130,102191577
+South Korea,122,85632231
+Soviet Union,437,-1
+Spain,14,85633129
+Sri Lanka,15,85632313
+Sudan,144,85632751
+Suriname,414,85632443
+Swaziland,195,85632635
+Sweden,31,85633789
+Switzerland,8,85633051
+Syria,86,85632413
+Tahiti,83,-1
+"Taiwan, ROC",7,85632403
+Tanzania,95,85632227
+Thailand,6,85632293
+The Moon,432,-1
+Tibet,142,-1
+Togo,196,85632647
+Tonga,197,85632455
+Trinidad and Tobago,151,85632271
+Tunisia,70,85632703
+Turkey,30,85632393
+Turkmenistan,82,85632671
+Turks and Caicos Islands,420,85632205
+U.S. Virgin Islands,422,85632169
+Uganda,153,85632625
+Ukraine,34,85633805
+Unknown,430,-1
+Uruguay,63,85632511
+USA,1,85633793
+Uzbekistan,123,85632645
+Vanuatu,198,85632263
+Venezuela,62,85632317
+Vietnam,124,85632763
+Wales,40,85633159
+West Indies,140,85632569
+Yemen,199,85632499
+Yugoslavia,125,-1
+Zambia,200,85632559
+Zanzibar,92,-1
+Zimbabwe,55,85632243
