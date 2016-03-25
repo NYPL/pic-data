@@ -17,8 +17,8 @@ class Constituent(DocType):
         fields={'raw': String(index='not_analyzed')}
     )
     Nationality = String()
-    BeginDate = String()
-    EndDate = String()
+    BeginDate = Integer()
+    EndDate = Integer()
     ConstituentTypeID = String()
     addressTotal = Integer()
     nameSort = String()
@@ -39,8 +39,8 @@ class Constituent(DocType):
             'State' : String(),
             'CountryID' : String(),
             'Country' : String(),
-            'BeginDate' : String(),
-            'EndDate' : String(),
+            'BeginDate' : Integer(),
+            'EndDate' : Integer(),
             'Remarks' : String(),
             'Location' : GeoPoint()
         }
