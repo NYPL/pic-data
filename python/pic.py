@@ -101,6 +101,8 @@ class Converter:
                 cleaned[kk] = v
             else:
                 cleaned[k] = v
+            if (k.find('BeginDate')==0 or k.find('EndDate')==0):
+                cleaned[k] = int(Converter.str_to_float(v))
         return cleaned
 
     @staticmethod
