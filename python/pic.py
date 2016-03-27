@@ -5,7 +5,8 @@ from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
-    filter = ['lowercase', 'asciifolding']
+    filter = ['lowercase', 'asciifolding'],
+    preserve_original = True
 )
 
 class Constituent(DocType):
