@@ -1,6 +1,6 @@
 # PIC Data Repository
 
-By David Lowe, code by [Mauricio Giraldo](//twitter.com/mgiraldo)
+By David Lowe, code by [Mauricio Giraldo](//twitter.com/mgiraldo), [NYPL Labs](//twitter.com/nypl_labs)
 
 ### View it at: [pic.nypl.org](http://pic.nypl.org)
 
@@ -8,7 +8,7 @@ The data itself is in the [`/csv` folder](csv/) and is described below. The [Pyt
 
 See also the [PIC application repository](//github.com/nypl/pic-app).
 
-### CSV files
+## CSV files
 
 These files are found in the [`/csv`](csv/) folder.
 
