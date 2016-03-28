@@ -31,6 +31,9 @@ These files are found in the [`/csv`](csv/) folder.
 
 [role.csv](csv/role.csv) indicates whether a Constituent was a Photographer, Manufacturer, Dealer of Photographic Supplies or other occupation within the discipline of photography. [roles.csv](csv/roles.csv) is the full list of Roles currently tracked in PIC. Other roles may be added periodically.
 
+### External CSV files
+
+[countries_wof.csv](csv/countries_wof.csv) was contributed by [Aaron Cope](https://github.com/thisisaaronland) and connects a `CountryID` in [countries.csv](csv/countries.csv) to Mapzen's [Who's On First data](https://github.com/whosonfirst/whosonfirst-data).
 
 ## License
 
