@@ -38,4 +38,6 @@ These files are found in the [`/csv`](csv/) folder.
 ## License
 
 - **Code:** see [LICENSE](LICENSE).
-- **Data:** to the extent that NYPL has a copyright interest in the [PIC-DATA](csv/), a [Creative Commons CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en) will apply. Though not required, if you want to credit us as the source, please use the following statement, "From The New York Public Library." Doing so helps us track how data is used and helps justify freely releasing even more content in the future.
+- **Data:** to the extent that NYPL has a copyright interest in [the data](csv/), a [Creative Commons CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en) will apply. Though not required, if you want to credit us as the source, please use the following statement, “From The New York Public Library.” Doing so helps us track how the data is used and helps justify freely releasing even more content in the future.
+
+
