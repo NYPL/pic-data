@@ -1,6 +1,6 @@
 # PIC Data Repository
 
-By David Lowe, code by [Mauricio Giraldo](//twitter.com/mgiraldo)
+By David Lowe, code by [Mauricio Giraldo](//twitter.com/mgiraldo), [NYPL Labs](//twitter.com/nypl_labs)
 
 ### View it at: [pic.nypl.org](http://pic.nypl.org)
 
