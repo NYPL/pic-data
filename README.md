@@ -33,7 +33,7 @@ These files are found in the [`/csv`](csv/) folder.
 
 ### External CSV files
 
-[countries_wof.csv](csv/countries_wof.csv) was contributed by [Aaron Cope](https://github.com/thisisaaronland) and connects a `CountryID` in [countries.csv](csv/countries.csv) to Mapzen's [Who's On First data](https://github.com/whosonfirst/whosonfirst-data).
+[countries_wof.csv](csv/countries_wof.csv) was contributed by [Aaron Straup Cope](https://github.com/thisisaaronland) and connects a `CountryID` in [countries.csv](csv/countries.csv) to Mapzen's [Who's On First data](https://github.com/whosonfirst/whosonfirst-data).
 
 ## License
 
