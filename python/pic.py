@@ -70,6 +70,7 @@ class Constituent(DocType):
     )
 
 class Address(DocType):
+    parent = Constituent()
     ConAddressID = String()
     ConstituentID = String()
     AddressTypeID = String()
