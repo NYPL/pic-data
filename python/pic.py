@@ -25,28 +25,6 @@ class Constituent(DocType):
     nameSort = String()
     TextEntry = String()
 
-    address = Nested(
-        include_in_parent=True,
-        properties={
-            'ConAddressID' : String(),
-            'ConstituentID' : String(),
-            'AddressTypeID' : String(),
-            'AddressType' : String(),
-            'DisplayName2' : String(),
-            'StreetLine1' : String(),
-            'StreetLine2' : String(),
-            'StreetLine3' : String(),
-            'City' : String(),
-            'State' : String(),
-            'CountryID' : String(),
-            'Country' : String(),
-            'BeginDate' : Integer(),
-            'EndDate' : Integer(),
-            'Remarks' : String(),
-            'Location' : GeoPoint()
-        }
-    )
-
     biography = Object(
         properties={
             'TermID' : String(),
@@ -90,6 +68,24 @@ class Constituent(DocType):
             'Term' : String()
         }
     )
+
+class Address(DocType):
+    ConAddressID = String()
+    ConstituentID = String()
+    AddressTypeID = String()
+    AddressType = String()
+    DisplayName2 = String()
+    StreetLine1 = String()
+    StreetLine2 = String()
+    StreetLine3 = String()
+    City = String()
+    State = String()
+    CountryID = String()
+    Country = String()
+    BeginDate = Integer()
+    EndDate = Integer()
+    Remarks = String()
+    Location = GeoPoint()
 
 class Converter:
 

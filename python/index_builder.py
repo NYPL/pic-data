@@ -3,17 +3,20 @@
 import csv
 import os
 import re
+
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 from elasticsearch_dsl import connections, Index, DocType, Nested, String, GeoPoint, Integer
-
-from pic import Constituent, Converter
+from pic import Constituent, Address, Converter
 
 import timeit
 import warnings
 warnings.filterwarnings('ignore')
 
 def build_action(row, index, doc_type):
+    """
+    Creates an ES action for indexing
+    """
     return {
         "_index": index,
         "_type": doc_type,
@@ -21,6 +24,9 @@ def build_action(row, index, doc_type):
     }
 
 def create_base_constituents():
+    """
+    Builds the raw skeleton of a constituent from constituents.csv
+    """
     reader = Converter.process_csv(os.environ['BASEPATH'] + 'constituents.csv')
     constituents = {}
     for row in reader:
@@ -32,7 +38,50 @@ def create_base_constituents():
         constituents[row['ConstituentID']] = row
     return constituents
 
+def create_constituent(data):
+    """
+    Creates a constituent in ES with data
+    """
+    action = build_action(data, 'constituent', 'constituent')
+    endpoint = create_endpoint()
+    es = Elasticsearch([endpoint])
+    result = helpers.bulk(es, [action])
+    # print "\nadded!\n"
+    # print result
+    # print "\n------------"
+    return result
+
+def create_indices():
+    """
+    Creates constituent and address indices in PIC
+    """
+    endpoint = create_endpoint()
+    connections.connections.create_connection(hosts=[endpoint], timeout=360)
+    constituent_index = Index('constituent')
+    constituent_index.doc_type(Constituent)
+    address_index = Index('address')
+    address_index.doc_type(Address)
+    try:
+        constituent_index.delete()
+        address_index.delete()
+    except:
+        pass
+    # constituent_index.settings(
+    #     number_of_shards=5,
+    #     number_of_replicas=2
+    # )
+    constituent_index.create()
+
+    # address_index.settings(
+    #     number_of_shards=5,
+    #     number_of_replicas=2
+    # )
+    address_index.create()
+
 def get_join_data(filepath):
+    """
+    To denormalize CSV data term IDs
+    """
     reader = Converter.process_csv(filepath)
     data = {}
     for row in reader:
@@ -47,22 +96,11 @@ def get_join_data(filepath):
     return data
 
 
-def process_constituents():
+def process_constituents(endpoint):
     """
     Consolidates all constituent data into a single dictionary. Pushes each dictionary as a document to Elastic.
     """
     start = timeit.default_timer()
-    protocol = "https://"
-    try:
-        protocol = os.environ['ELASTIC_PROTOCOL']
-    except KeyError:
-        pass
-    print protocol
-    try:
-        endpoint = protocol + os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@" + os.environ['ENDPOINT']
-    except KeyError:
-        print "\n\nNo environment variables set! (possible pull request)\n"
-        return
     constituents = create_base_constituents()
     counter = 0
     tables = ["format","biography","address","gender","process","role","collection"]
@@ -109,44 +147,55 @@ def process_constituents():
                     row['Location'] = { "lat" : float(latlon[0]), "lon" : float(latlon[1]) }
             constituents[cid][table].append(row)
         counter = counter + 1
-    # now sort addresses
-    for index, cid in enumerate(constituents):
-        if 'address' in constituents[cid]:
-            constituents[cid]['address'] = Converter.sort_addresses(constituents[cid]['address'])
-            constituents[cid]['addressTotal'] = len(constituents[cid]['address'])
     end = timeit.default_timer()
     print "\n\nProcessed CSVs in " + str(end - start) + " seconds\n"
     print "\n\nIndexing...\n"
-    # now on to elastic
-    index = 'pic'
-    document_type = 'constituent'
-    connections.connections.create_connection(hosts=[endpoint], timeout=360)
-    myindex = Index(index)
-    myindex.doc_type(Constituent)
-    try:
-        myindex.delete()
-    except:
-        pass
-    # try:
-    #     es.indices.delete_mapping(index=index, doc_type=document_type)
-    # except:
-    #     pass
-    myindex.settings(
-        number_of_shards=5,
-        number_of_replicas=2
-    )
-    myindex.create()
-    actions = [build_action(value, index, document_type) for key, value in constituents.iteritems()]
-    es = Elasticsearch([endpoint], timeout=30, max_retries=10, retry_on_timeout=True)
-    helpers.bulk(es, actions)
+    # now on to elastic (index already created)
+    for index, cid in enumerate(constituents):
+        addresses = []
+        if 'address' in constituents[cid]:
+            # sort addresses
+            addresses = Converter.sort_addresses(constituents[cid]['address'])
+            constituents[cid]['addressTotal'] = len(constituents[cid]['address'])
+            del constituents[cid]['address']
+        # put the constituent in there
+        index_id = create_constituent(constituents[cid])
+        if len(addresses) > 0:
+            # put the addresses
+            actions = [build_action(value, 'address', 'address') for value in addresses]
+            es = Elasticsearch([endpoint], timeout=30, max_retries=10, retry_on_timeout=True)
+            helpers.bulk(es, actions)
     return constituents
 
+def create_endpoint():
+    """
+    Builds the ES endpoint string
+
+    Returns empty if unable (no environment vars present)
+    """
+    protocol = "https://"
+    try:
+        protocol = os.environ['ELASTIC_PROTOCOL']
+    except KeyError:
+        pass
+    # print protocol
+    try:
+        endpoint = protocol + os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@" + os.environ['ENDPOINT']
+        return endpoint
+    except KeyError:
+        print "\n\nNo environment variables set! (possible pull request)\n"
+        return ""
 
 def main():
     start = timeit.default_timer()
-    constituents = process_constituents()
+    endpoint = create_endpoint()
+    if endpoint == "":
+        print "\n\nIMPORT ABORTED!"
+        return
+    create_indices()
+    constituents = process_constituents(endpoint)
     end = timeit.default_timer()
-    print end - start
+    print "Done in " + str((end - start)/60) + " minutes"
 
 if __name__ == "__main__":
     main()
