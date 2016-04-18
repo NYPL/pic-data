@@ -122,7 +122,8 @@ def process_constituents(endpoint):
             if ((table in constituents[row['ConstituentID']]) == False):
                 constituents[row['ConstituentID']][table] = []
             cid = row['ConstituentID']
-            del row['ConstituentID']
+            if not 'AddressTypeID' in row:
+                del row['ConstituentID']
             # add the value of the term id
             if 'TermID' in row:
                 if ((row['TermID'] in joindata) == False):
