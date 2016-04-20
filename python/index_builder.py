@@ -52,20 +52,12 @@ def create_constituent(data):
     """
     Creates a constituent in ES with data
     """
-    action = build_action(data, 'pic', 'constituent')
-    endpoint = create_endpoint()
-    es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
-    result = helpers.bulk(es, [action])
-    # print "\nadded!\n"
-    # print result
-    # print "\n------------"
-    return result
+    return build_action(data, 'pic', 'constituent')
 
-def create_indices():
+def create_indices(endpoint):
     """
     Creates constituent and address indices in PIC
     """
-    endpoint = create_endpoint()
     connections.connections.create_connection(hosts=[endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
     pic_index = Index('pic')
     pic_index.doc_type(Constituent)
@@ -153,8 +145,10 @@ def process_constituents(endpoint):
         counter = counter + 1
     end = timeit.default_timer()
     print "\n\nProcessed CSVs in " + str(end - start) + " seconds\n"
-    print "\n\nIndexing...\n"
+    print "\n\nPreparing indexing actions...\n"
+    start = timeit.default_timer()
     # now on to elastic (index already created)
+    actions = []
     for index, cid in enumerate(constituents):
         addresses = []
         if 'address' in constituents[cid]:
@@ -163,12 +157,16 @@ def process_constituents(endpoint):
             constituents[cid]['addressTotal'] = len(constituents[cid]['address'])
             del constituents[cid]['address']
         # put the constituent in there
-        index_id = create_constituent(constituents[cid])
+        actions.append(create_constituent(constituents[cid]))
         if len(addresses) > 0:
             # put the addresses
-            actions = [build_action(value, 'pic', 'address') for value in addresses]
-            es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
-            helpers.bulk(es, actions)
+            actions = actions + ([build_action(value, 'pic', 'address') for value in addresses])
+    end = timeit.default_timer()
+    print "\n\nActions prepared in " + str((end - start)/60) + " minutes\n"
+    print "\n\nIndexing...\n"
+    create_indices(endpoint)
+    es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
+    helpers.bulk(es, actions)
     return constituents
 
 def create_endpoint():
@@ -196,7 +194,6 @@ def main():
     if endpoint == "":
         print "\n\nIMPORT ABORTED!"
         return
-    create_indices()
     constituents = process_constituents(endpoint)
     end = timeit.default_timer()
     print "Done in " + str((end - start)/60) + " minutes"
