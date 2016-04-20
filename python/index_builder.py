@@ -54,7 +54,7 @@ def create_constituent(data):
     """
     action = build_action(data, 'pic', 'constituent')
     endpoint = create_endpoint()
-    es = Elasticsearch([endpoint])
+    es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
     result = helpers.bulk(es, [action])
     # print "\nadded!\n"
     # print result
@@ -66,7 +66,7 @@ def create_indices():
     Creates constituent and address indices in PIC
     """
     endpoint = create_endpoint()
-    connections.connections.create_connection(hosts=[endpoint], timeout=360)
+    connections.connections.create_connection(hosts=[endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
     pic_index = Index('pic')
     pic_index.doc_type(Constituent)
     pic_index.doc_type(Address)
@@ -167,7 +167,7 @@ def process_constituents(endpoint):
         if len(addresses) > 0:
             # put the addresses
             actions = [build_action(value, 'pic', 'address') for value in addresses]
-            es = Elasticsearch([endpoint], timeout=30, max_retries=10, retry_on_timeout=True)
+            es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
             helpers.bulk(es, actions)
     return constituents
 
