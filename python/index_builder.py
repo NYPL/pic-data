@@ -17,11 +17,20 @@ def build_action(row, index, doc_type):
     """
     Creates an ES action for indexing
     """
-    return {
+    cleaned = Converter.remove_bom(row)
+    if not "id" in cleaned:
+        print "NO ID!!!1!"
+        print cleaned
+    action = {
         "_index": index,
         "_type": doc_type,
-        "_source": Converter.remove_bom(row)
+        "_source": cleaned,
+        "_id": cleaned["id"]
     }
+    if doc_type == 'address':
+        action["_parent"] = cleaned['ConstituentID']
+        action["_routing"] = cleaned['ConstituentID']
+    return action
 
 def create_base_constituents():
     """
@@ -35,6 +44,7 @@ def create_base_constituents():
             print "No AlphaSort in: " + row['ConstituentID']
             row['AlphaSort'] = ''
         row['nameSort'] = row['AlphaSort'].split(" ")[0]
+        row['id'] = row['ConstituentID']
         constituents[row['ConstituentID']] = row
     return constituents
 
@@ -42,7 +52,7 @@ def create_constituent(data):
     """
     Creates a constituent in ES with data
     """
-    action = build_action(data, 'constituent', 'constituent')
+    action = build_action(data, 'pic', 'constituent')
     endpoint = create_endpoint()
     es = Elasticsearch([endpoint])
     result = helpers.bulk(es, [action])
@@ -57,26 +67,17 @@ def create_indices():
     """
     endpoint = create_endpoint()
     connections.connections.create_connection(hosts=[endpoint], timeout=360)
-    constituent_index = Index('constituent')
-    constituent_index.doc_type(Constituent)
-    address_index = Index('address')
-    address_index.doc_type(Address)
-    try:
-        constituent_index.delete()
-        address_index.delete()
-    except:
-        pass
-    # constituent_index.settings(
-    #     number_of_shards=5,
-    #     number_of_replicas=2
-    # )
-    constituent_index.create()
+    pic_index = Index('pic')
+    pic_index.doc_type(Constituent)
+    pic_index.doc_type(Address)
+    pic_index.delete(ignore=404)
 
-    # address_index.settings(
-    #     number_of_shards=5,
-    #     number_of_replicas=2
-    # )
-    address_index.create()
+    pic_index.settings(
+        number_of_shards=5,
+        number_of_replicas=2
+    )
+    pic_index.create()
+
 
 def get_join_data(filepath):
     """
@@ -122,8 +123,10 @@ def process_constituents(endpoint):
             if ((table in constituents[row['ConstituentID']]) == False):
                 constituents[row['ConstituentID']][table] = []
             cid = row['ConstituentID']
-            if not 'AddressTypeID' in row:
+            if not 'ConAddressID' in row:
                 del row['ConstituentID']
+            else:
+                row['id'] = row['ConAddressID']
             # add the value of the term id
             if 'TermID' in row:
                 if ((row['TermID'] in joindata) == False):
@@ -163,7 +166,7 @@ def process_constituents(endpoint):
         index_id = create_constituent(constituents[cid])
         if len(addresses) > 0:
             # put the addresses
-            actions = [build_action(value, 'address', 'address') for value in addresses]
+            actions = [build_action(value, 'pic', 'address') for value in addresses]
             es = Elasticsearch([endpoint], timeout=30, max_retries=10, retry_on_timeout=True)
             helpers.bulk(es, actions)
     return constituents

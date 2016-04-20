@@ -1,7 +1,7 @@
 import csv
 import re
 
-from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer, Long, GeoPoint
+from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer, Long, GeoPoint, MetaField
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
@@ -10,6 +10,7 @@ accent_analyzer = analyzer('accent_analyzer',
 )
 
 class Constituent(DocType):
+    id = String()
     ConstituentID = String()
     DisplayName = String(analyzer=accent_analyzer)
     DisplayDate = String()
@@ -70,7 +71,7 @@ class Constituent(DocType):
     )
 
 class Address(DocType):
-    parent = Constituent()
+    id = String()
     ConAddressID = String()
     ConstituentID = String()
     AddressTypeID = String()
@@ -87,6 +88,9 @@ class Address(DocType):
     EndDate = Integer()
     Remarks = String()
     Location = GeoPoint()
+
+    class Meta:
+        parent = MetaField(type='constituent')
 
 class Converter:
 
