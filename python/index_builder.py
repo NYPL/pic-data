@@ -64,10 +64,10 @@ def create_indices(endpoint):
     pic_index.doc_type(Address)
     pic_index.delete(ignore=404)
 
-    # pic_index.settings(
-    #     number_of_shards=5,
-    #     number_of_replicas=2
-    # )
+    pic_index.settings(
+        number_of_shards=5,
+        number_of_replicas=2
+    )
     pic_index.create()
 
 
