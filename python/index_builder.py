@@ -166,7 +166,15 @@ def process_constituents(endpoint):
     print "\n\nIndexing...\n"
     create_indices(endpoint)
     es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
-    helpers.bulk(es, actions)
+    # split the actions into batches of 10k
+    n = 10000
+    index = 0
+    print "  Splitting..."
+    splitactions = [actions[i:i+n] for i in range(0, len(actions), n-1)]
+    for actionlist in splitactions:
+        print "  actions " + str(index*n) + " to " + str((index+1)*n)
+        index = index + 1
+        helpers.bulk(es, actionlist)
     return constituents
 
 def create_endpoint():
