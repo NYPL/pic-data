@@ -64,10 +64,10 @@ def create_indices(endpoint):
     pic_index.doc_type(Address)
     pic_index.delete(ignore=404)
 
-    pic_index.settings(
-        number_of_shards=5,
-        number_of_replicas=2
-    )
+    # pic_index.settings(
+    #     number_of_shards=5,
+    #     number_of_replicas=2
+    # )
     pic_index.create()
 
 
@@ -149,6 +149,7 @@ def process_constituents(endpoint):
     start = timeit.default_timer()
     # now on to elastic (index already created)
     actions = []
+    addresslist = []
     for index, cid in enumerate(constituents):
         addresses = []
         if 'address' in constituents[cid]:
@@ -156,26 +157,35 @@ def process_constituents(endpoint):
             addresses = Converter.sort_addresses(constituents[cid]['address'])
             constituents[cid]['addressTotal'] = len(constituents[cid]['address'])
             del constituents[cid]['address']
+            # put the addresses
+            addresslist = addresslist + addresses
         # put the constituent in there
         actions.append(create_constituent(constituents[cid]))
-        if len(addresses) > 0:
-            # put the addresses
-            actions = actions + ([build_action(value, 'pic', 'address') for value in addresses])
     end = timeit.default_timer()
     print "\n\nActions prepared in " + str((end - start)/60) + " minutes\n"
     print "\n\nIndexing...\n"
     create_indices(endpoint)
     es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
     # split the actions into batches of 10k
-    n = 10000
+    print "  Constituents..."
     index = 0
-    print "  Splitting..."
-    splitactions = [actions[i:i+n] for i in range(0, len(actions), n-1)]
-    for actionlist in splitactions:
-        print "  actions " + str(index*n) + " to " + str((index+1)*n)
+    n = 10000
+    splitactions = split_list(actions, n)
+    for actionchunk in splitactions:
+        print "    actions " + str(index*n) + " to " + str((index+1)*n)
         index = index + 1
-        helpers.bulk(es, actionlist)
+        helpers.bulk(es, actionchunk)
+    print "  Addesses..."
+    index = 0
+    splitaddresses = split_list(addresslist, n)
+    for addresschunk in splitaddresses:
+        print "    actions " + str(index*n) + " to " + str((index+1)*n)
+        index = index + 1
+        helpers.bulk(es, [build_action(value, 'pic', 'address') for value in addresschunk])
     return constituents
+
+def split_list(original_list, chunksize = 10000):
+    return [original_list[i:i+chunksize] for i in range(0, len(original_list), chunksize-1)]
 
 def create_endpoint():
     """
