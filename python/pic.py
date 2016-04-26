@@ -100,8 +100,10 @@ class Converter:
         for k, v in row.iteritems():
             if (k.find('\xef\xbb\xbf')==0):
                 kk = re.sub(r'\xef\xbb\xbf', r'', k)
-                cleaned[kk] = v
+                cleaned[kk] = v.decode('utf-8')
             else:
+                if type(v) is str:
+                    v = v.decode('utf-8')
                 cleaned[k] = v
             if (k.find('BeginDate')==0 or k.find('EndDate')==0):
                 cleaned[k] = int(Converter.str_to_float(v))
@@ -109,8 +111,8 @@ class Converter:
 
     @staticmethod
     def convert_whitespace(string):
-        string = string.replace('\xc2\xa0', ' ') # because WTF MSSQL Server!?
-        string = string.replace('\u00a0', ' ') # because WTF MSSQL Server!?
+        string = string.encode('utf-8').replace('\xc2\xa0', ' ').decode('utf-8') # because WTF MSSQL Server!?
+        string = string.encode('utf-8').replace('\u00a0', ' ').decode('utf-8') # because WTF MSSQL Server!?
         return string
 
     @staticmethod

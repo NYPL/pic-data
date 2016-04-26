@@ -147,7 +147,7 @@ def process_constituents(endpoint):
     print "\n\nProcessed CSVs in " + str(end - start) + " seconds\n"
     print "\n\nPreparing indexing actions...\n"
     start = timeit.default_timer()
-    # now on to elastic (index already created)
+    # now on to elastic
     actions = []
     addresslist = []
     for index, cid in enumerate(constituents):
