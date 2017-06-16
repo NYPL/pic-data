@@ -6,7 +6,7 @@ before_install:
 install:
 - pip install -r ./python/requirements.txt
 script:
-- "./python/prebuild.sh"
+- travis_wait "./python/prebuild.sh"
 notifications:
   email:
     recipients:
