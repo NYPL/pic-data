@@ -11979,7 +11979,7 @@
 379364,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/2?t:ac=M&t:state:flow=22684a36-569d-4222-b6c6-420745e2c108
 379749,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/20?t:ac=S&t:state:flow=41b008d8-a024-42ba-963f-f2a333a6fa34
 379816,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/11?t:ac=T&t:state:flow=c1fce49a-2524-4ef8-a49b-0cb4bde3ad13
-387766,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/1?t:ac=U&t:state:flow=82fe4eb5-a567-4b49-96e5-d2a206fcb661
+387766,2028271,http://190.12.86.155/coleccionvirtual/view/people/asitem/U/2/alphaSort-asc?t:state:flow=f7ee950d-37fe-4081-a798-bc399103c5b9
 393316,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/6?t:ac=A&t:state:flow=417157c2-e052-4b51-92f3-1c55d7bb1dcc
 393317,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/15?t:ac=A&t:state:flow=417157c2-e052-4b51-92f3-1c55d7bb1dcc
 393318,2028271,http://190.12.86.155/coleccionvirtual/people/view.peopledetailslink/16?t:ac=A&t:state:flow=417157c2-e052-4b51-92f3-1c55d7bb1dcc
@@ -12344,6 +12344,7 @@
 269718,2028015,http://www.mocp.org/collection/index.php
 269737,2028015,http://www.mocp.org/collection/index.php
 269761,2028015,http://www.mocp.org/collection/index.php
+269812,2028015,http://www.mocp.org/collection/index.php
 269840,2028015,http://www.mocp.org/collection/index.php
 270072,2028015,http://www.mocp.org/collection/index.php
 270128,2028015,http://www.mocp.org/collection/index.php
@@ -16745,6 +16746,7 @@
 274937,2028021,http://www.npg.org.uk/collections/search/person/mp131456
 275144,2028021,http://www.npg.org.uk/collections/search/person/mp72319
 275200,2028021,http://www.npg.org.uk/collections/search/person/mp08551
+275402,2028021,http://www.npg.org.uk/collections/search/person/mp82693
 275807,2028021,http://www.npg.org.uk/collections/search/person/mp88676
 276147,2028021,http://www.npg.org.uk/collections/search/person/mp10699
 276178,2028021,http://www.npg.org.uk/collections/search/person/mp19001
@@ -17023,6 +17025,7 @@
 334609,2028021,http://www.npg.org.uk/collections/search/person/mp16116
 334818,2028021,http://www.npg.org.uk/collections/search/person/mp149561
 334906,2028021,http://www.npg.org.uk/collections/search/person/mp84874
+335383,2028021,http://www.npg.org.uk/collections/search/person/mp17338
 335652,2028021,http://www.npg.org.uk/collections/search/person/mp71573
 335842,2028021,http://www.npg.org.uk/collections/search/person/mp97589
 335989,2028021,http://www.npg.org.uk/collections/search/person/mp147573
@@ -19646,7 +19649,7 @@
 2124,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Marion+Faller&search_field=all_fields&commit=search
 2125,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=James+Klukkert&search_field=all_fields&commit=search
 2126,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Russell+Munson&search_field=all_fields&commit=search
-2127,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Leonard+Speier&search_field=all_fields&commit=search
+2127,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Len+Speier&search_field=all_fields&commit=search
 2128,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Harvey+Zipkin&search_field=all_fields&commit=search
 2129,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=E.+Willard+Spurr&search_field=all_fields&commit=search
 2130,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Michel+Berthaud&search_field=all_fields&commit=search
@@ -20209,7 +20212,7 @@
 2855,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Daniel+J.+McGrail&search_field=all_fields&commit=search
 2856,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Abelardo+Morell&search_field=all_fields&commit=search
 2857,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Lisa+Limer&search_field=all_fields&commit=search
-2858,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Lee+E.+Wexler&search_field=all_fields&commit=search
+2858,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Lee+Wexler&search_field=all_fields&commit=search
 2859,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Silvia+Taccani&search_field=all_fields&commit=search
 2860,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Andreas+Rentsch&search_field=all_fields&commit=search
 2861,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Michael+D.+Minichiello&search_field=all_fields&commit=search
@@ -21260,7 +21263,7 @@
 4098,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Oscar+Pierre+Havens&search_field=all_fields&commit=search
 4099,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Frans+Tessaro&search_field=all_fields&commit=search
 4100,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=William+C.+Babberger&search_field=all_fields&commit=search
-4101,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Loletie+M.+Smith&search_field=all_fields&commit=search
+4101,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Loletie+Miller+Smith&search_field=all_fields&commit=search
 4102,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Charles+L.+Pond&search_field=all_fields&commit=search
 4103,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Tourez+Bros.&search_field=all_fields&commit=search
 4104,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=W.+H.+Willard+Jones&search_field=all_fields&commit=search
@@ -21446,7 +21449,7 @@
 4333,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Arthur+J.+Hargrave&search_field=all_fields&commit=search
 4334,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Josiah+Johnson+Hawes&search_field=all_fields&commit=search
 4335,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Charles+Wesley+Hearn&search_field=all_fields&commit=search
-4336,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Odber+W.+Heffer&search_field=all_fields&commit=search
+4336,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Odber+Heffer&search_field=all_fields&commit=search
 4337,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Hennigar+Bros.&search_field=all_fields&commit=search
 4338,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Charles+W.+Hill&search_field=all_fields&commit=search
 4339,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=William+Henry+Hill&search_field=all_fields&commit=search
@@ -21879,7 +21882,7 @@
 4935,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Ernestine+Ruben&search_field=all_fields&commit=search
 4937,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Michael+Schmidt&search_field=all_fields&commit=search
 4938,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Mary+Steichen+Martin&search_field=all_fields&commit=search
-4939,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Martha+Jean+Swope&search_field=all_fields&commit=search
+4939,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Martha+Swope&search_field=all_fields&commit=search
 4940,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Francesca+Woodman&search_field=all_fields&commit=search
 4941,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Amos+Badertscher&search_field=all_fields&commit=search
 4942,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Marius+von+Bucovich&search_field=all_fields&commit=search
@@ -25041,7 +25044,6 @@
 22722,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Fred+Holmes&search_field=all_fields&commit=search
 22723,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=William+Dacia+Holmes&search_field=all_fields&commit=search
 22736,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Insetsu+Kioku&search_field=all_fields&commit=search
-22737,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Kyuichi+Uchida&search_field=all_fields&commit=search
 22740,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Kimball+%26+Son&search_field=all_fields&commit=search
 22743,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Louis+Lafon&search_field=all_fields&commit=search
 22748,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Thomas+W.+Rogers&search_field=all_fields&commit=search
@@ -26229,6 +26231,7 @@
 311372,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Alexander+W.+Dreyfoos+Sr.&search_field=all_fields&commit=search
 311741,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Chuck+Kelton&search_field=all_fields&commit=search
 311813,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Penelope+Umbrico&search_field=all_fields&commit=search
+311845,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Don+Unrau&search_field=all_fields&commit=search
 311850,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Franz+Unterberger&search_field=all_fields&commit=search
 311925,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=André+Louis+Ducos+du+Hauron&search_field=all_fields&commit=search
 312215,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Marie-Alexandre+Alophe&search_field=all_fields&commit=search
@@ -26322,6 +26325,7 @@
 338798,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Sydney+V.+Webb&search_field=all_fields&commit=search
 339364,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Geymet&search_field=all_fields&commit=search
 339448,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Sarkis&search_field=all_fields&commit=search
+340883,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Uchida+Kuichi&search_field=all_fields&commit=search
 341522,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Ruben+E.+Reyes&search_field=all_fields&commit=search
 341554,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=William+Heighway&search_field=all_fields&commit=search
 341555,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=of+the+B.+J.+Practicus&search_field=all_fields&commit=search
@@ -27573,6 +27577,7 @@
 31599,2028306,http://americanart.si.edu/collections/search/artist/?id=7181
 31675,2028306,http://americanart.si.edu/collections/search/artist/?id=29230
 31864,2028306,http://americanart.si.edu/collections/search/artist/?id=814
+51926,2028306,https://americanart.si.edu/artist/hans-breder-30130
 68440,2028306,http://americanart.si.edu/collections/search/artist/?id=995
 171098,2028306,http://americanart.si.edu/collections/search/artist/?id=6582
 185099,2028306,http://americanart.si.edu/collections/search/artist/?id=6502
@@ -27726,6 +27731,7 @@
 307662,2028306,http://americanart.si.edu/collections/search/artist/?id=29133
 308157,2028306,http://americanart.si.edu/collections/search/artist/?id=29555
 308452,2028306,http://americanart.si.edu/collections/search/artist/?id=18
+308533,2028306,https://americanart.si.edu/artist/lyn-adams-25
 309129,2028306,http://americanart.si.edu/collections/search/artist/?id=1293
 309461,2028306,http://americanart.si.edu/collections/search/artist/?id=2539
 310193,2028306,http://americanart.si.edu/collections/search/artist/?id=5715
