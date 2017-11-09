@@ -1427,7 +1427,6 @@
 2109,2028287,http://collections.eastman.org/people/61002/jerry-uelsmann/objects
 2112,2028287,http://collections.eastman.org/people/17200/pepe-diniz/objects
 2115,2028287,http://collections.eastman.org/people/8855/peter-britt/objects
-2116,2028287,http://collections.eastman.org/people/48959/publishers-photo-service/objects
 2118,2028287,http://collections.eastman.org/people/17763/jim-dow/objects
 2124,2028287,http://collections.eastman.org/people/20257/marion-faller/objects
 2131,2028287,http://collections.eastman.org/people/46477/rudolf-eickemeyer-jr/objects
@@ -7446,6 +7445,7 @@
 408724,2028287,http://collections.eastman.org/people/12162/m-myers/objects
 410835,2028287,http://collections.eastman.org/people/64306/j-wickstrom/objects
 413294,2028287,http://collections.eastman.org/people/42665/monroe-studio/objects
+413613,2028287,http://collections.eastman.org/people/48959/publishers-photo-service/objects
 20,2028014,http://www.getty.edu/visit/study_room/Photographer_List_Jan2016.pdf
 432,2028014,http://www.getty.edu/visit/study_room/Photographer_List_Jan2016.pdf
 520,2028014,http://www.getty.edu/visit/study_room/Photographer_List_Jan2016.pdf
@@ -19640,7 +19640,6 @@
 2112,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Pepe+Diniz&search_field=all_fields&commit=search
 2113,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Dana+B.+Merrill&search_field=all_fields&commit=search
 2115,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Peter+Britt&search_field=all_fields&commit=search
-2116,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Publisher's+Photo+Service&search_field=all_fields&commit=search
 2118,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Jim+Dow&search_field=all_fields&commit=search
 2119,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=William+R.+Brooks&search_field=all_fields&commit=search
 2120,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Schuyler+U.+Bunnell&search_field=all_fields&commit=search
@@ -22048,7 +22047,7 @@
 5291,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Joaquin+A.+Gonsalves&search_field=all_fields&commit=search
 5292,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Charles+Taber+%26+Co.&search_field=all_fields&commit=search
 5294,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Harry+Brooks&search_field=all_fields&commit=search
-5296,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Empire+Flashlight+Co.&search_field=all_fields&commit=search
+5296,2028165,"http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Empire+Flashlight+Co.,+Inc.&search_field=all_fields&commit=search"
 5297,2028165,"http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Drucker-Hilbert+Co.,+Inc.&search_field=all_fields&commit=search"
 5298,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Liberty+Flashlight+Co.&search_field=all_fields&commit=search
 5299,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Standard+Flashlight+Co.&search_field=all_fields&commit=search
@@ -26296,7 +26295,7 @@
 327824,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Southwell+Bros.&search_field=all_fields&commit=search
 327956,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Morton+%26+Co.&search_field=all_fields&commit=search
 328663,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Courtney+Studio&search_field=all_fields&commit=search
-329273,2028165,"http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Ideal+Photo+Service+[New+York,+NY]&search_field=all_fields&commit=search"
+329273,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Ideal+Photo+Service&search_field=all_fields&commit=search
 330012,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Jonals+Co.&search_field=all_fields&commit=search
 330017,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Jones+%26+Stiff&search_field=all_fields&commit=search
 330524,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Fratelli+D'Alessandri&search_field=all_fields&commit=search
@@ -26460,7 +26459,7 @@
 376659,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Ping+Pong+Photos&search_field=all_fields&commit=search
 376661,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Joseph+Kornweiss&search_field=all_fields&commit=search
 376663,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Alexander+C.+Kalt&search_field=all_fields&commit=search
-376672,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=De+Youngs'&search_field=all_fields&commit=search
+376672,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=De+Youngs&search_field=all_fields&commit=search
 376679,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Mandelkern&search_field=all_fields&commit=search
 376687,2028165,"http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Phillips+Studio+[New+York,+NY]&search_field=all_fields&commit=search"
 376688,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Fredricks&search_field=all_fields&commit=search
@@ -27232,6 +27231,7 @@
 413198,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Lynn+Kitagaki-Lau&search_field=all_fields&commit=search
 413199,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Michael+Roeder&search_field=all_fields&commit=search
 413200,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Kerri+Savage&search_field=all_fields&commit=search
+413613,2028165,"http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Publishers+Photo+Service,+Inc.&search_field=all_fields&commit=search"
 414071,2028165,http://wallachprintsandphotos.nypl.org/catalog?utf8=%E2%9C%93&q=Eulenstein&search_field=all_fields&commit=search
 21,2028306,http://americanart.si.edu/collections/search/artist/?id=6144
 28,2028306,http://americanart.si.edu/collections/search/artist/?id=4390
