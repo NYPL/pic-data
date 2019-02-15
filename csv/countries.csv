@@ -1,5 +1,4 @@
-﻿CountryID,Country
-433,Aegean Sea
+﻿433,Aegean Sea
 87,Afghanistan
 127,Africa (general)
 318,Albania
@@ -28,6 +27,7 @@
 16,Belgium
 88,Belize
 333,Benin
+443,Bering Sea
 94,Bermuda
 99,Bohemia
 100,Bolivia
@@ -215,7 +215,7 @@
 8,Switzerland
 86,Syria
 83,Tahiti
-7,"Taiwan, ROC"
+7,Taiwan, ROC
 95,Tanzania
 6,Thailand
 432,The Moon
