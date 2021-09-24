@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from elasticsearch_dsl import analyzer, Document, Object, Text, Integer, GeoPoint, MetaField
+from elasticsearch_dsl import analyzer, Document, Object, Text, Integer, GeoPoint, Join
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
@@ -74,6 +74,8 @@ class Constituent(Document):
         }
     )
 
+    constituent_address = Join(relations={"constituent": "address"})
+
 class Address(Document):
     id = Text()
     ConAddressID = Text()
@@ -92,9 +94,6 @@ class Address(Document):
     EndDate = Integer()
     Remarks = Text()
     Location = GeoPoint()
-
-    class Meta:
-        parent = MetaField(type='constituent')
 
 class Converter:
 
