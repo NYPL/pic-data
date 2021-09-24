@@ -3,33 +3,53 @@
 import csv
 import os
 import re
+import json
 
-from elasticsearch import Elasticsearch
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from elasticsearch import Elasticsearch, serializer, compat, exceptions
 from elasticsearch import helpers
-from elasticsearch_dsl import connections, Index, DocType, Nested, String, GeoPoint, Integer
+from elasticsearch_dsl import connections, Index
 from pic import Constituent, Address, Converter
 
 import timeit
 import warnings
 warnings.filterwarnings('ignore')
 
-def build_action(row, index, doc_type):
+class JSONSerializerPython2(serializer.JSONSerializer):
+    """Override elasticsearch library serializer to ensure it encodes utf characters during json dump.
+    See original at: https://github.com/elastic/elasticsearch-py/blob/master/elasticsearch/serializer.py#L42
+    A description of how ensure_ascii encodes unicode characters to ensure they can be sent across the wire
+    as ascii can be found here: https://docs.python.org/2/library/json.html#basic-usage
+
+    Taken from: https://github.com/elastic/elasticsearch-py/issues/374#issue-139119498
+    """
+    def dumps(self, data):
+        # don't serialize strings
+        if isinstance(data, compat.string_types):
+            return data
+        try:
+            return json.dumps(data, default=self.default, ensure_ascii=True)
+        except (ValueError, TypeError) as e:
+            raise exceptions.SerializationError(data, e)
+
+def build_action(row, index, document):
     """
     Creates an ES action for indexing
     """
     cleaned = Converter.remove_bom(row)
     if not "id" in cleaned:
-        print "NO ID!!!1!"
-        print cleaned
+        print("NO ID!!!1!")
+        print(cleaned)
     action = {
         "_index": index,
-        "_type": doc_type,
+        "_type": document,
         "_source": cleaned,
         "_id": cleaned["id"]
     }
-    if doc_type == 'address':
-        action["_parent"] = cleaned['ConstituentID']
-        action["_routing"] = cleaned['ConstituentID']
+    action["relation_type"] = {"name": document}
     return action
 
 def create_base_constituents():
@@ -41,7 +61,7 @@ def create_base_constituents():
     for row in reader:
         row = Converter.remove_bom(row)
         if (row['AlphaSort'] == None):
-            print "No AlphaSort in: " + row['ConstituentID']
+            print("No AlphaSort in: " + row['ConstituentID'])
             row['AlphaSort'] = ''
         row['nameSort'] = row['AlphaSort'].split(" ")[0]
         row['id'] = row['ConstituentID']
@@ -60,8 +80,8 @@ def create_indices(endpoint):
     """
     connections.connections.create_connection(hosts=[endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
     pic_index = Index('pic')
-    pic_index.doc_type(Constituent)
-    pic_index.doc_type(Address)
+    pic_index.document(Constituent)
+    pic_index.document(Address)
     pic_index.delete(ignore=404)
 
     pic_index.settings(
@@ -110,7 +130,7 @@ def process_constituents(endpoint):
         for row in reader:
             row = Converter.remove_bom(row)
             if ((row['ConstituentID'] in constituents) == False):
-                print "No constituent:" + row['ConstituentID']
+                print("No constituent:" + row['ConstituentID'])
                 continue
             if ((table in constituents[row['ConstituentID']]) == False):
                 constituents[row['ConstituentID']][table] = []
@@ -122,17 +142,17 @@ def process_constituents(endpoint):
             # add the value of the term id
             if 'TermID' in row:
                 if ((row['TermID'] in joindata) == False):
-                    print "No " + table + ":" + row['TermID']
+                    print("No " + table + ":" + row['TermID'])
                 else:
                     row['Term'] = joindata[row['TermID']]
             if 'AddressTypeID' in row:
                 if ((row['AddressTypeID'] in joindata[0]) == False):
-                    print "No " + joins[counter][0] + ":" + row['AddressTypeID']
-                    print joindata[0]
+                    print("No " + joins[counter][0] + ":" + row['AddressTypeID'])
+                    print(joindata[0])
                 else:
                     row['AddressType'] = joindata[0][row['AddressTypeID']]
                 if ((row['CountryID'] in joindata[1]) == False):
-                    print "No " + joins[counter][1] + ":" + row['CountryID']
+                    print("No " + joins[counter][1] + ":" + row['CountryID'])
                 else:
                     row['Country'] = joindata[1][row['CountryID']]
             if 'Remarks' in row:
@@ -144,8 +164,8 @@ def process_constituents(endpoint):
             constituents[cid][table].append(row)
         counter = counter + 1
     end = timeit.default_timer()
-    print "\n\nProcessed CSVs in " + str(end - start) + " seconds\n"
-    print "\n\nPreparing indexing actions...\n"
+    print("\n\nProcessed CSVs in " + str(end - start) + " seconds\n")
+    print("\n\nPreparing indexing actions...\n")
     start = timeit.default_timer()
     # now on to elastic (index already created)
     actions = []
@@ -162,24 +182,24 @@ def process_constituents(endpoint):
         # put the constituent in there
         actions.append(create_constituent(constituents[cid]))
     end = timeit.default_timer()
-    print "\n\nActions prepared in " + str((end - start)/60) + " minutes\n"
-    print "\n\nIndexing...\n"
+    print("\n\nActions prepared in " + str((end - start)/60) + " minutes\n")
+    print("\n\nIndexing...\n")
     create_indices(endpoint)
-    es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True)
+    es = Elasticsearch([endpoint], timeout=360, max_retries=10, retry_on_timeout=True, serializer=JSONSerializerPython2())
     # split the actions into batches of 10k
-    print "  Constituents..."
+    print("  Constituents...")
     index = 0
     n = 10000
     splitactions = split_list(actions, n)
     for actionchunk in splitactions:
-        print "    actions " + str(index*n) + " to " + str((index+1)*n)
+        print("    actions " + str(index*n) + " to " + str((index+1)*n))
         index = index + 1
         helpers.bulk(es, actionchunk)
-    print "  Addesses..."
+    print("  Addesses...")
     index = 0
     splitaddresses = split_list(addresslist, n)
     for addresschunk in splitaddresses:
-        print "    actions " + str(index*n) + " to " + str((index+1)*n)
+        print("    actions " + str(index*n) + " to " + str((index+1)*n))
         index = index + 1
         helpers.bulk(es, [build_action(value, 'pic', 'address') for value in addresschunk])
     return constituents
@@ -198,23 +218,26 @@ def create_endpoint():
         protocol = os.environ['ELASTIC_PROTOCOL']
     except KeyError:
         pass
-    # print protocol
+    # print(protocol)
     try:
-        endpoint = protocol + os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@" + os.environ['ENDPOINT']
+        credentials = ""
+        if os.environ['ELASTIC_USER'] != "" and os.environ['ELASTIC_PASSWORD'] != "":
+            credentials = os.environ['ELASTIC_USER'] + ":" + os.environ['ELASTIC_PASSWORD'] + "@"
+        endpoint = protocol + credentials + os.environ['ENDPOINT']
         return endpoint
     except KeyError:
-        print "\n\nNo environment variables set! (possible pull request)\n"
+        print("\n\nNo environment variables set! (possible pull request)\n")
         return ""
 
 def main():
     start = timeit.default_timer()
     endpoint = create_endpoint()
     if endpoint == "":
-        print "\n\nIMPORT ABORTED!"
+        print("\n\nIMPORT ABORTED!")
         return
     constituents = process_constituents(endpoint)
     end = timeit.default_timer()
-    print "Done in " + str((end - start)/60) + " minutes"
+    print("Done in " + str((end - start)/60) + " minutes")
 
 if __name__ == "__main__":
     main()
