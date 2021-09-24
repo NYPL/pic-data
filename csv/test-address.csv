@@ -1,0 +1,2 @@
+ConAddressID,ConstituentID,AddressTypeID,DisplayName2,StreetLine1,StreetLine2,StreetLine3,City,State,CountryID,BeginDate,EndDate,Remarks
+230457,414194,2,1932,120 West 42nd Street,NULL,NULL,New York,NY,1,1932,1932,"40.755156, -73.984869"
