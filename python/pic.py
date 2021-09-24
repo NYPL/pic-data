@@ -20,7 +20,7 @@ class Constituent(Document):
     DisplayDate = Text()
     AlphaSort = Text(
         analyzer=accent_analyzer,
-        fields={'raw': Text(index=False)}
+        fields={'raw': Text(fielddata=True)}
     )
     Nationality = Text(fielddata=True)
     BeginDate = Integer()
