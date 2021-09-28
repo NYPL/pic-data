@@ -1,7 +1,11 @@
 import csv
 import re
 
-from elasticsearch_dsl import analyzer, DocType, Object, Nested, String, Integer, Long, GeoPoint, MetaField
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from elasticsearch_dsl import analyzer, Document, Object, Text, Integer, GeoPoint, Join, Keyword
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
@@ -9,91 +13,91 @@ accent_analyzer = analyzer('accent_analyzer',
     preserve_original = True
 )
 
-class Constituent(DocType):
-    id = String()
-    ConstituentID = String()
-    DisplayName = String(analyzer=accent_analyzer)
-    DisplayDate = String()
-    AlphaSort = String(
+class Constituent(Document):
+    id = Text()
+    ConstituentID = Text()
+    DisplayName = Text(analyzer=accent_analyzer)
+    DisplayDate = Text()
+    AlphaSort = Text(
         analyzer=accent_analyzer,
-        fields={'raw': String(index='not_analyzed')}
+        fields={'raw': Text(fielddata=True, index_prefixes={'min_chars': 1, 'max_chars': 10})}
     )
-    Nationality = String()
+    Nationality = Text(fielddata=True)
     BeginDate = Integer()
     EndDate = Integer()
-    ConstituentTypeID = String()
+    ConstituentTypeID = Text()
     addressTotal = Integer()
-    nameSort = String()
-    TextEntry = String()
+    nameSort = Text(
+        analyzer=accent_analyzer,
+        fielddata=True, index_prefixes={'min_chars': 1, 'max_chars': 5})
+    TextEntry = Text()
 
     biography = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String(),
-            'URL' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text(),
+            'URL' : Text()
         }
     )
 
     collection = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String(),
-            'URL' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text(),
+            'URL' : Text()
         }
     )
 
     format = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text()
         }
     )
 
     gender = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text()
         }
     )
 
     process = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text()
         }
     )
 
     role = Object(
         properties={
-            'TermID' : String(),
-            'Term' : String()
+            'TermID' : Text(fielddata=True),
+            'Term' : Text()
         }
     )
 
-class Address(DocType):
-    id = String()
-    ConAddressID = String()
-    ConstituentID = String()
-    AddressTypeID = String()
-    AddressType = String()
-    DisplayName2 = String()
-    StreetLine1 = String()
-    StreetLine2 = String()
-    StreetLine3 = String()
-    City = String()
-    State = String()
-    CountryID = String()
-    Country = String()
+    constituent_address = Join(relations={"constituent": "address"})
+
+class Address(Document):
+    id = Text()
+    ConAddressID = Text()
+    ConstituentID = Text()
+    AddressTypeID = Text(fielddata=True)
+    AddressType = Text()
+    DisplayName2 = Text()
+    StreetLine1 = Text()
+    StreetLine2 = Text()
+    StreetLine3 = Text()
+    City = Text()
+    State = Text()
+    CountryID = Text(fielddata=True)
+    Country = Text()
     BeginDate = Integer()
     EndDate = Integer()
-    Remarks = String()
+    Remarks = Text()
     Location = GeoPoint()
 
-    class Meta:
-        parent = MetaField(type='constituent')
-
 class Converter:
-
     @staticmethod
     def remove_bom(row):
         cleaned = {}
@@ -137,7 +141,7 @@ class Converter:
 
     @staticmethod
     def process_csv(filename):
-        print "loaded " + filename
+        print("loaded " + filename)
         response = open(filename)
         reader = csv.DictReader(response)
         return reader

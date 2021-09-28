@@ -11,7 +11,7 @@ notifications:
   email:
     recipients:
       - davidlowe@nypl.org
-      - mauriciogiraldo@nypl.org
+      - hello@mauriciogiraldo.com
 #  slack:
 #    secure: Q59WrM1w1SFlch23Wl4/B1zK1o5A7VyuR1HTgUQM9cGbDx+OyeJnFcJl3/1gXytyw82hdUmUCayvUeeQnCNLBWXamclUALjkFNDiVf7VdRfvOdNesGLW3oGGjHgDNXBVIQpaBfDBQknKh9Gn8XOzzvJ0efXQBGasE+dJjJz7EeeanHAnLNGEJQL15FUtlewJ7bnD5YMaks6oTD9/R+t85Bf4tqK4gIYYzFjZMRgkNW14gC5PKOPQVdh2TptfWF/0mTP/Rloa8PdanX7SmPXR8vHziqD8dvc2xtSbRqtMYcmM5qlGniOPu90y2OGfdxlqrQdj1q/mNanK0DO5R3d9QQLdRgahjUKtrlazThzKXRCkn1423lWbk/GTQAGBHToJ7IUo3EfMN+U46UO0RVqR4+sPgLLjlHgeqxiZXwj/yoVXClJEu2ik+KTXNJtdXWPqeC0aSAsS0ew1heQWWEpRtsC91K6dh6AWeHGaqumLnOTZN+mR2c/aVB9JOTYG4vdO8KxAbjNt/9yEv2IkDknNlZFSviZOzJSF0vobrhrJfh+b7sr83XXY36EzKX8yrptluDGcNF5tAkBVK9QiYxbCjY2EDeQHLaWTvxRvyxmsMDWEsca4eNt6XE66JzoQstIonei5ETp+0r5RN3dezL5zSj1ESy3+5Srt5H0FHhT6/kY=
 before_deploy:

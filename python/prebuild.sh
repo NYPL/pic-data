@@ -3,6 +3,9 @@
 echo ""
 echo "#### STARTED TRAVIS-CI MAGIC"
 
+# echo "Testing connection"
+# python ./python/test_connection.py
+
 echo "Creating text files"
 python ./python/data_converter.py
 

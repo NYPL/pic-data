@@ -4,6 +4,10 @@ import csv
 import os
 import re
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from pic import Converter
 
 import timeit
@@ -17,7 +21,7 @@ def generate_base_locations():
     """
     basepath = os.environ['BASEPATH']
     response = open(basepath+'address.csv')
-    print "\n\nloaded " + basepath + "address.csv"
+    print("\n\nloaded " + basepath + "address.csv")
     reader = csv.DictReader(response)
     location_pattern = re.compile("(\-?\d+(\.\d+)?)\s*,\s*(\-?\d+(\.\d+)?).*")
     places = []
@@ -28,11 +32,11 @@ def generate_base_locations():
         remarks = row['Remarks']
         remarks = Converter.convert_whitespace(remarks)
         if remarks == None:
-            print "No remarks:" + row['ConstituentID'] + ":" + remarks
+            print("No remarks:" + row['ConstituentID'] + ":" + remarks)
             continue
         if location_pattern.match(remarks) == None:
             if remarks != "NULL":
-                print "NULL remarks:" + row['ConstituentID'] + ":" + remarks
+                print("NULL remarks:" + row['ConstituentID'] + ":" + remarks)
             continue
         row['Remarks'] = remarks
         every_row.append(row)
@@ -66,29 +70,29 @@ def generate_base_locations():
         if row['AddressTypeID'] != "NULL":
             address.append(row['AddressTypeID'])
         else:
-            print "no type:" + row['ConstituentID']
+            print("no type:" + row['ConstituentID'])
             address.append("1")
         address.append(row['CountryID'])
         places.extend(address)
     locations = "[\"constituents\", [" + ",".join(places) + "]]"
     output = basepath+'latlons.txt'
-    print "\nwrote " + output
+    print("\nwrote " + output)
     text_file = open(output, "w")
     text_file.write(locations)
     text_file.close()
     locations = "[\"heights\", [" + ",".join(heights) + "]]"
     output = basepath+'heights.txt'
-    print "\nwrote " + output
+    print("\nwrote " + output)
     text_file = open(output, "w")
     text_file.write(locations)
     text_file.close()
 
 def main():
     start = timeit.default_timer()
-    print start
+    print("started at: %f" % start)
     generate_base_locations()
     end = timeit.default_timer()
-    print end - start
+    print(end - start)
 
 if __name__ == "__main__":
     main()
