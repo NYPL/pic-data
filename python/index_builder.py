@@ -73,7 +73,7 @@ class IndexBuilder:
             if (row['AlphaSort'] == None):
                 print("No AlphaSort in: " + row['ConstituentID'])
                 row['AlphaSort'] = ''
-            row['nameSort'] = re.sub(r"[´\-_`'[\]\"&,\.,\s]*", "", (row['AlphaSort'].decode("utf-8")).lower())
+            row['nameSort'] = re.sub(r"[’´\-_`'[\]\(\)\"&,\.,\s\+\?\*/\\\$]*", "", (row['AlphaSort'].decode("utf-8")).lower())
             row['id'] = row['ConstituentID']
             constituents[row['ConstituentID']] = row
         return constituents
