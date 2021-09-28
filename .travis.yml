@@ -10,10 +10,8 @@ script:
 notifications:
   email:
     recipients:
-      - davidlowe@nypl.org
-      - hello@mauriciogiraldo.com
-#  slack:
-#    secure: Q59WrM1w1SFlch23Wl4/B1zK1o5A7VyuR1HTgUQM9cGbDx+OyeJnFcJl3/1gXytyw82hdUmUCayvUeeQnCNLBWXamclUALjkFNDiVf7VdRfvOdNesGLW3oGGjHgDNXBVIQpaBfDBQknKh9Gn8XOzzvJ0efXQBGasE+dJjJz7EeeanHAnLNGEJQL15FUtlewJ7bnD5YMaks6oTD9/R+t85Bf4tqK4gIYYzFjZMRgkNW14gC5PKOPQVdh2TptfWF/0mTP/Rloa8PdanX7SmPXR8vHziqD8dvc2xtSbRqtMYcmM5qlGniOPu90y2OGfdxlqrQdj1q/mNanK0DO5R3d9QQLdRgahjUKtrlazThzKXRCkn1423lWbk/GTQAGBHToJ7IUo3EfMN+U46UO0RVqR4+sPgLLjlHgeqxiZXwj/yoVXClJEu2ik+KTXNJtdXWPqeC0aSAsS0ew1heQWWEpRtsC91K6dh6AWeHGaqumLnOTZN+mR2c/aVB9JOTYG4vdO8KxAbjNt/9yEv2IkDknNlZFSviZOzJSF0vobrhrJfh+b7sr83XXY36EzKX8yrptluDGcNF5tAkBVK9QiYxbCjY2EDeQHLaWTvxRvyxmsMDWEsca4eNt6XE66JzoQstIonei5ETp+0r5RN3dezL5zSj1ESy3+5Srt5H0FHhT6/kY=
+    - davidlowe@nypl.org
+    - hello@mauriciogiraldo.com
 before_deploy:
 - echo 'Cleaning extraneous files before S3 deploy'
 - rm ./python/*
@@ -22,11 +20,11 @@ before_deploy:
 - rmdir python
 deploy:
   provider: s3
-  cache_control: "max-age=0"
-  access_key_id: AKIAI3GZHKGEODNQACTA
+  cache_control: max-age=0
+  access_key_id: AKIAT6VUAOZSGQ25FGX4
   secret_access_key:
-    secure: eiBr7zsdq5MhoHzQIgfwi4BsnaU4wz692C6swSr+B/ywZvwWY2p0k6f9Tm+hqGcXXK6XsdW4weyHk+eYvNof8mgpHkoV5FbJ3g2hTmyExn0QQVk7LJD7A9u+Of/yOkEvn0cAB2QWXVtB+NHc7rwwF8yvJ8JFGq5ZFyamSvV7iqEnQhuG1EG/nqq8OCE4A2gu9y5C3mDlbLAJEdTacHzXEIjDAAb+9BL4Kd2BvwU9V7KaLVhLEG49LbhDnA/BXM55Ho9mEoPj2fgGmzXwloCDBcAMDp6LhkKao8AClqezkQsdnMSY+SitQ+Ndb+aOcQ3VRKQJ8otCnWmeNxQ9+jbk4vnhfKuBbvcFL/bpOwGbtvNBKQeO1cOkNNbqyPRC6cf4E0pFX4NE9R5pqZNrVuBWCY8JgubABd3wcp/JE7n7qBTV36r1i6cWm0u0AymmfBQZjGVVQL6huysezyYmvb8tgdlwHRNM2V+PDH1ZJE4vjaQj49khjlBLCracougM4v6KmTCmUMOYSZ4MDuyd63eOy4PU+vAdw9wZtzx3J+GCyeOtwob1+i8si3gRhgm4LjtVRPsKy2AH/qAeVs8IXPvW5IgdxFYNqNnanOIZ/zSzTk0dB6VQyyvXzK1XQiu9EANvESwLk6iqoENAl8pbnOtvdxyujmqjI7TKMpI4z5GEEW4=
-  bucket: pic-data
+    secure: AhZDSIkFT5nYXyo+NgaBgslwVOBRbOGWzJBfCYw7lNfQB4otwXkfOyo4iV+t3uU5uoYsbTEwsRbFiqeDbYnz82UzN2qYlNmkCoMZ6Z7A4b3BXUG1rOQpEn47H4yVui19ZYphJDhxLYdYnZmnNGyn7gzhuIHPRDIz8HwAk2YbJx+xe8c5A/xtHXUZ09RWhaVwnilHnrMFmus0c17qJNUXE2NWulGGRuH8I+K71KppI35Auk0Hcto5ckdBjBUH9f6ZDfkO0bCoL/QuWX2ZA3qWd1s/59rLtwl6K3UsvDIklaH0OXeBUiRnbMXmn9htNu4FHNyTK/zv3vhCzzaBMNzksfMH1pMrdDTWbW4qf0g5/R/de0rhN/eLVZXhXwxFuxou+L/WKaLG+XPLVjSjxJG3GdBpbLGpb9TR6ynk6ekQyoD63tOYjj+8IoEhl4Nl8t/JV1K6ySXPMyXJgx4hhjDtJmoDSOegKXTmQMkuF9JmHTlO3+ksU+AToYwbuhQvlDxGRhEOs9teMneWNHybbDyNL06GPnhq0L6dSxs7a1Jda2wrvi8FlLsFAwA8fnkEojflw0hOgPuYrdxWOCpHfbjeD52rdroDjxVmBnkGvtgHDQ1Z9du0ZK1eJEi5Et9uK6zdGo1KG51aT37KYbn2yMEgQnbA4biefDJ0nF2Bhd44Q/4=
+  bucket: mga-pic-data
   skip_cleanup: true
   acl: public_read
   on:
