@@ -30,4 +30,4 @@ deploy:
   skip_cleanup: true
   acl: public_read
   on:
-    repo: NYPL/pic-data
+    repo: mgiraldo/pic-data
