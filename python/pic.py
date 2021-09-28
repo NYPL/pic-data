@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from elasticsearch_dsl import analyzer, Document, Object, Text, Integer, GeoPoint, Join
+from elasticsearch_dsl import analyzer, Document, Object, Text, Integer, GeoPoint, Join, Keyword
 
 accent_analyzer = analyzer('accent_analyzer',
     tokenizer='standard',
@@ -20,14 +20,16 @@ class Constituent(Document):
     DisplayDate = Text()
     AlphaSort = Text(
         analyzer=accent_analyzer,
-        fields={'raw': Text(fielddata=True)}
+        fields={'raw': Text(fielddata=True, index_prefixes={'min_chars': 1, 'max_chars': 10})}
     )
     Nationality = Text(fielddata=True)
     BeginDate = Integer()
     EndDate = Integer()
     ConstituentTypeID = Text()
     addressTotal = Integer()
-    nameSort = Text()
+    nameSort = Text(
+        analyzer=accent_analyzer,
+        fielddata=True, index_prefixes={'min_chars': 1, 'max_chars': 5})
     TextEntry = Text()
 
     biography = Object(
@@ -96,7 +98,6 @@ class Address(Document):
     Location = GeoPoint()
 
 class Converter:
-
     @staticmethod
     def remove_bom(row):
         cleaned = {}

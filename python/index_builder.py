@@ -72,7 +72,7 @@ class IndexBuilder:
             if (row['AlphaSort'] == None):
                 print("No AlphaSort in: " + row['ConstituentID'])
                 row['AlphaSort'] = ''
-            row['nameSort'] = row['AlphaSort'].split(" ")[0]
+            row['nameSort'] = row['AlphaSort'].lower().replace("&", "").replace(" ", "").replace(",", "").replace(".", "")
             row['id'] = row['ConstituentID']
             constituents[row['ConstituentID']] = row
         return constituents
@@ -96,6 +96,7 @@ class IndexBuilder:
         pic_index.delete(ignore=404)
 
         pic_index.settings(
+            max_result_window=100000, # because pagination in elastic is a pain in the ass
             number_of_shards=5,
             number_of_replicas=2
         )
@@ -153,7 +154,7 @@ class IndexBuilder:
                 if not 'ConAddressID' in row:
                     del row['ConstituentID']
                 else:
-                    row['id'] = row['ConAddressID']
+                    row['id'] = "A" + row['ConAddressID'] # because address and constituent share ids in ES7 need prevent collision
                 # add the value of the term id
                 if 'TermID' in row:
                     if ((row['TermID'] in joindata) == False):
