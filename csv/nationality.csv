@@ -1,5 +1,4 @@
-﻿ConstituentID,Nationality
-2,American
+﻿2,American
 20,German
 21,American
 28,American
@@ -98,6 +97,7 @@
 997,French
 998,American
 999,American
+1007,American
 1065,French
 1066,Spanish
 1083,American
@@ -234,6 +234,7 @@
 1766,American
 1769,Russian
 1771,American
+1772,American
 1773,American
 1774,American
 1776,Scottish
@@ -306,6 +307,7 @@
 1866,French
 1867,American
 1868,Cuban
+1869,American
 1870,American
 1871,English
 1872,English
@@ -596,7 +598,6 @@
 2207,American
 2209,American
 2210,American
-2211,German
 2212,French
 2213,American
 2214,American
@@ -917,7 +918,6 @@
 2613,Swiss
 2614,American
 2615,American
-2616,American
 2617,American
 2618,French
 2620,American
@@ -1759,7 +1759,6 @@
 3597,American
 3598,English
 3599,British
-3600,American
 3601,American
 3602,American
 3603,German
@@ -1780,7 +1779,6 @@
 3621,American
 3622,American
 3623,American
-3624,American
 3625,American
 3626,American
 3627,American
@@ -1878,6 +1876,7 @@
 3733,American
 3734,American
 3735,American
+3736,American
 3737,American
 3739,American
 3740,American
@@ -1889,7 +1888,6 @@
 3750,American
 3753,American
 3754,American
-3755,American
 3756,American
 3757,Canadian
 3758,American
@@ -2520,7 +2518,6 @@
 4480,American
 4481,American
 4482,American
-4483,American
 4484,American
 4485,American
 4486,American
@@ -3240,7 +3237,6 @@
 6700,Greek
 6701,Italian
 6705,American
-6706,American
 6707,German
 6709,Hungarian
 6710,German
@@ -4756,7 +4752,6 @@
 8828,American
 8830,American
 8831,American
-8834,American
 8835,American
 8836,American
 8837,American
@@ -4872,7 +4867,6 @@
 8994,American
 8995,American
 8996,American
-8997,Argentine
 8998,Argentine
 9000,Argentine
 9001,Argentine
@@ -5262,6 +5256,8 @@
 9645,American
 9647,French
 9648,American
+9649,English
+9650,American
 9653,American
 9654,American
 9655,American
@@ -5324,6 +5320,7 @@
 9747,American
 9748,American
 9749,American
+9750,American
 9751,American
 9752,American
 9753,American
@@ -5408,7 +5405,6 @@
 10092,American
 10095,American
 10101,American
-10104,American
 10107,American
 10148,American
 10166,Japanese
@@ -7020,6 +7016,7 @@
 23042,American
 23043,American
 23044,American
+23049,American
 23053,American
 23054,American
 23055,American
@@ -7037,7 +7034,6 @@
 23154,French
 23157,Italian
 23176,American
-23207,American
 23213,English
 23313,English
 23328,English
@@ -7676,7 +7672,6 @@
 33263,American
 33264,American
 33265,American
-33266,American
 33267,American
 33302,American
 33316,American
@@ -7737,7 +7732,6 @@
 52435,American
 52436,American
 52437,American
-52443,Russian
 52445,Russian
 52461,American
 52462,American
@@ -7865,8 +7859,11 @@
 60538,American
 60539,American
 60540,American
+60547,American
 60551,American
+60553,American
 60561,American
+60569,American
 60579,American
 60587,American
 60589,American
@@ -8037,7 +8034,6 @@
 68194,American
 68197,American
 68198,American
-68200,American
 68201,American
 68202,American
 68203,American
@@ -8232,6 +8228,7 @@
 264783,German
 264791,Swiss
 264806,Italian
+264808,German
 264830,American
 264839,American
 264898,French
@@ -8282,6 +8279,7 @@
 265518,American
 265531,American
 265535,American
+265853,Lithuanian
 265897,American
 265900,Austrian
 265906,American
@@ -10392,6 +10390,7 @@
 268757,American
 268760,French
 268762,American
+268763,Irish
 268765,German
 268769,German
 268772,Austrian
@@ -10820,7 +10819,6 @@
 269332,American
 269333,American
 269334,American
-269335,American
 269336,American
 269337,American
 269338,American
@@ -13967,6 +13965,7 @@
 273370,American
 273372,American
 273376,German
+273377,German
 273379,Polish
 273381,British
 273386,Italian
@@ -16014,7 +16013,6 @@
 275959,American
 275962,English
 275963,American
-275964,American
 275965,French
 275966,Belgian
 275967,Dutch
@@ -18071,6 +18069,7 @@
 278543,American
 278546,Australian
 278548,Chilean
+278549,British
 278551,American
 278554,French
 278556,German
@@ -20561,6 +20560,7 @@
 281694,French
 281695,English
 281698,English
+281699,American
 281700,American
 281701,English
 281702,Irish
@@ -22621,6 +22621,8 @@
 284307,English
 284309,British
 284310,British
+284314,American
+284315,American
 284319,English
 284323,American
 284326,Colombian
@@ -23288,7 +23290,6 @@
 285169,French
 285170,Belgian
 285171,French
-285172,French
 285173,Dutch
 285174,American
 285175,American
@@ -23558,7 +23559,6 @@
 285476,American
 285478,American
 285479,American
-285481,American
 285482,American
 285483,American
 285484,American
@@ -23730,6 +23730,7 @@
 285673,Australian
 285677,American
 285678,American
+285680,Scottish
 285681,American
 285682,American
 285685,English
@@ -24283,6 +24284,7 @@
 286432,American
 286433,Australian
 286434,American
+286435,American
 286437,American
 286444,American
 286446,American
@@ -24764,6 +24766,7 @@
 287048,Native American
 287051,Canadian
 287053,American
+287062,American
 287063,English
 287065,American
 287066,American
@@ -25936,7 +25939,6 @@
 288552,American
 288553,German
 288554,German
-288555,German
 288556,American
 288557,English
 288558,German
@@ -27195,7 +27197,6 @@
 290137,American
 290138,American
 290139,American
-290140,American
 290141,American
 290142,American
 290143,American
@@ -27726,6 +27727,7 @@
 290794,Canadian
 290795,American
 290796,English
+290797,American
 290798,American
 290799,Canadian
 290801,Canadian
@@ -31408,6 +31410,7 @@
 295048,Polish
 295049,American
 295050,Czech
+295051,Italian
 295053,Russian
 295054,American
 295055,English
@@ -33431,7 +33434,6 @@
 297385,American
 297386,American
 297389,English
-297390,American
 297391,English
 297393,American
 297394,American
@@ -34446,7 +34448,6 @@
 298546,French
 298550,American
 298551,American
-298552,American
 298553,British
 298554,American
 298555,Belgian
@@ -35200,7 +35201,6 @@
 299424,English
 299425,American
 299426,American
-299427,American
 299428,American
 299429,American
 299430,American
@@ -35747,7 +35747,6 @@
 300051,English
 300052,Scottish
 300053,Scottish
-300054,American
 300055,American
 300057,American
 300059,American
@@ -39039,7 +39038,6 @@
 303821,American
 303822,American
 303823,American
-303824,American
 303825,English
 303827,American
 303828,British
@@ -39301,7 +39299,6 @@
 304125,English
 304126,Italian
 304127,American
-304128,American
 304129,American
 304130,Australian
 304131,American
@@ -40871,7 +40868,7 @@
 305940,Canadian
 305941,American
 305942,American
-305943,Native American
+305943,American
 305944,English
 305945,Belgian
 305946,French
@@ -43964,6 +43961,7 @@
 309534,American
 309535,American
 309537,Danish
+309538,American
 309539,American
 309540,American
 309541,Russian
@@ -45763,6 +45761,7 @@
 311630,Swiss
 311631,American
 311632,Belgian
+311633,American
 311636,American
 311637,American
 311638,American
@@ -50571,6 +50570,8 @@
 317483,German
 317488,Swedish
 317489,Russian
+317490,American
+317491,German
 317495,American
 317496,American
 317497,American
@@ -51902,7 +51903,6 @@
 319266,Belgian
 319267,English
 319268,American
-319269,American
 319270,American
 319271,American
 319272,English
@@ -56404,6 +56404,7 @@
 324887,British
 324891,American
 324894,French
+324895,American
 324900,American
 324901,French
 324902,American
@@ -57753,7 +57754,7 @@
 326678,French
 326679,American
 326680,American
-326681,American
+326681,English
 326682,English
 326683,American
 326684,Australian
@@ -58198,10 +58199,11 @@
 327295,English
 327296,American
 327299,American
-327301,British
+327301,English
 327303,German
 327307,English
 327308,Irish
+327315,American
 327318,American
 327323,American
 327324,American
@@ -58366,7 +58368,6 @@
 327515,American
 327516,English
 327517,American
-327518,American
 327519,American
 327520,English
 327521,British
@@ -58440,7 +58441,6 @@
 327593,American
 327594,American
 327595,American
-327596,American
 327597,American
 327598,American
 327599,American
@@ -58653,7 +58653,7 @@
 327853,American
 327854,British
 327855,British
-327856,British
+327856,English
 327857,British
 327858,New Zealander
 327859,English
@@ -59681,7 +59681,6 @@
 329002,Scottish
 329003,American
 329004,American
-329005,American
 329006,American
 329007,American
 329008,American
@@ -61139,7 +61138,6 @@
 330682,American
 330684,British
 330685,Canadian
-330686,American
 330688,American
 330690,Australian
 330691,Australian
@@ -61307,7 +61305,6 @@
 330884,French
 330885,American
 330886,English
-330887,American
 330888,Canadian
 330889,French
 330890,American
@@ -62790,6 +62787,7 @@
 332740,American
 332741,American
 332745,Canadian
+332748,English
 332751,American
 332752,American
 332754,American
@@ -66627,6 +66625,7 @@
 337402,Japanese
 337403,Japanese
 337404,Japanese
+337405,American
 337406,Finnish
 337407,Czechoslovakian
 337409,Czechoslovakian
@@ -66780,7 +66779,7 @@
 337586,French
 337587,French
 337588,French
-337589,French
+337589,Italian
 337590,Yugoslavian
 337592,Indian
 337594,English
@@ -68321,7 +68320,6 @@
 339728,American
 339729,French
 339730,American
-339732,American
 339734,French
 339735,French
 339737,French
@@ -68574,7 +68572,6 @@
 340129,British
 340130,Italian
 340131,German
-340132,American
 340135,French
 340144,American
 340145,English
@@ -68781,7 +68778,6 @@
 340424,French
 340425,American
 340428,American
-340432,American
 340433,American
 340435,Dutch
 340436,American
@@ -68975,7 +68971,7 @@
 340707,Italian
 340708,American
 340709,German
-340710,French
+340710,Italian
 340711,German
 340714,English
 340715,German
@@ -69351,7 +69347,6 @@
 341273,American
 341275,American
 341276,Chinese
-341277,American
 341279,French
 341280,German
 341283,American
@@ -69577,6 +69572,7 @@
 341670,French
 341671,German
 341673,French
+341674,German
 341675,French
 341681,French
 341683,American
@@ -72162,7 +72158,6 @@
 344576,American
 344577,American
 344578,American
-344579,American
 344580,American
 344581,American
 344582,American
@@ -73538,7 +73533,6 @@
 349527,American
 349528,American
 349529,American
-349530,American
 349531,American
 349532,American
 349533,American
@@ -74510,7 +74504,6 @@
 350529,American
 350530,American
 350531,American
-350532,American
 350533,American
 350534,American
 350535,American
@@ -76776,7 +76769,6 @@
 352873,American
 352874,American
 352875,American
-352876,American
 352877,American
 352878,American
 352879,Canadian
@@ -79256,7 +79248,6 @@
 355405,American
 355406,American
 355407,American
-355408,American
 355409,American
 355410,American
 355411,American
@@ -82073,7 +82064,6 @@
 358435,American
 358436,American
 358437,American
-358438,American
 358439,American
 358440,American
 358441,American
@@ -87689,7 +87679,6 @@
 364750,American
 364752,American
 364753,American
-364754,American
 364755,American
 364756,American
 364757,American
@@ -88672,6 +88661,7 @@
 365844,American
 365850,English
 365855,American
+365857,Hungarian
 365858,German
 365861,American
 365866,American
@@ -102408,7 +102398,6 @@
 385489,American
 385490,Australian
 385491,German
-385492,Indian
 385493,Indian
 385494,Romanian
 385495,Russian
@@ -120485,6 +120474,7 @@
 413167,Chilean
 413168,Chilean
 413169,Chilean
+413173,American
 413185,American
 413198,American
 413199,American
@@ -120791,7 +120781,6 @@
 413551,American
 413552,American
 413553,American
-413554,American
 413555,American
 413556,American
 413557,American
@@ -120966,7 +120955,6 @@
 413727,American
 413728,American
 413729,American
-413730,American
 413731,American
 413732,American
 413733,American
@@ -122032,6 +122020,7 @@
 418519,American
 418522,American
 418523,American
+418542,American
 418558,American
 418572,American
 418581,American
@@ -122043,3 +122032,174 @@
 418595,American
 418600,American
 418601,American
+418607,Chinese
+418608,French
+418610,Chinese
+418611,Chinese
+418612,British
+418615,American
+418616,American
+418619,American
+418620,American
+418623,American
+418626,American
+418627,American
+418628,American
+418634,American
+418710,American
+418711,American
+418712,American
+418713,American
+418716,American
+418717,American
+418718,American
+418719,American
+418720,American
+418722,American
+418723,American
+418724,American
+418725,American
+418726,American
+418727,American
+418728,American
+418729,American
+418730,American
+418731,American
+418733,American
+418734,American
+418735,American
+418736,American
+418737,American
+418738,American
+418739,American
+418740,American
+418741,American
+418742,American
+418743,American
+418744,American
+418745,American
+418746,American
+418747,American
+418748,American
+418749,American
+418767,American
+418773,American
+418796,American
+418799,American
+418807,American
+418808,American
+418809,American
+418810,American
+418811,American
+418814,American
+418818,American
+418819,American
+418821,American
+418824,American
+418826,American
+418829,American
+418833,American
+418837,American
+418838,American
+418839,American
+418840,American
+418842,American
+418856,German
+418874,American
+418883,American
+418917,Italian
+418924,American
+418925,Italian
+418933,American
+418934,American
+418936,American
+418937,American
+418949,American
+418950,French
+418960,Czech
+418962,American
+418963,American
+418965,American
+418966,American
+418971,American
+418976,Italian
+418991,American
+418994,English
+418997,German
+419020,American
+419028,American
+419111,Chinese
+419124,American
+419228,American
+419229,American
+419348,American
+419413,American
+419414,American
+419419,American
+419420,American
+419423,American
+419426,American
+419427,American
+419428,American
+419431,American
+419432,American
+419434,American
+419447,American
+419448,American
+419451,American
+419452,American
+419454,American
+419455,American
+419456,American
+419457,American
+419458,American
+419459,Jamaican
+419460,American
+419462,American
+419477,American
+419478,American
+419484,American
+419495,American
+419496,American
+419497,American
+419503,American
+419504,American
+419547,American
+419551,Turkish
+419553,Russian
+419556,Russian
+419557,Russian
+419558,Polish
+419560,Polish
+419564,American
+419565,Polish
+419573,American
+419584,American
+419585,American
+419586,American
+419601,American
+419607,American
+419614,American
+419615,American
+419616,American
+419621,American
+419627,American
+419629,American
+419630,American
+419632,American
+419641,American
+419642,American
+419643,American
+419646,American
+419647,American
+419649,American
+419654,American
+419655,Canadian
+419673,American
+419674,American
+419675,American
+419705,American
+419814,American
+419815,American
+419816,American
+419817,American
