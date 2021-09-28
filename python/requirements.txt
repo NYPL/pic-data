@@ -1,4 +1,4 @@
-elasticsearch5
-elasticsearch-dsl>=5.0.0,<6.0.0
+elasticsearch
+elasticsearch-dsl>=7.0.0,<8.0.0
 numpy
 python-dotenv
