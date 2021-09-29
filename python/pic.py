@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import csv
 import re
 
@@ -101,7 +104,7 @@ class Converter:
     @staticmethod
     def remove_bom(row):
         cleaned = {}
-        for k, v in row.iteritems():
+        for k, v in row.items():
             if (k.find('\xef\xbb\xbf')==0):
                 kk = re.sub(r'\xef\xbb\xbf', r'', k)
                 cleaned[kk] = v
@@ -142,7 +145,7 @@ class Converter:
     @staticmethod
     def process_csv(filename):
         print("loaded " + filename)
-        response = open(filename)
+        response = open(filename, encoding='utf-8-sig')
         reader = csv.DictReader(response)
         return reader
 

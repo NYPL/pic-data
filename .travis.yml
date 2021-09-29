@@ -1,6 +1,6 @@
 language: python
 python:
-- '2.7'
+- '3.9.7'
 before_install:
 - chmod 755 ./python/prebuild.sh
 install:
@@ -22,7 +22,7 @@ deploy:
   provider: s3
   edge: true
   cache_control: max-age=0
-  access_key_id: AKIAT6VUAOZSGQ25FGX4
+  access_key_id: AKIAT6VUAOZSIK73VAUA
   secret_access_key: $AWS_SECRET
   bucket: mga-pic-data
   acl: public_read
