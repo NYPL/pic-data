@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import csv
 import os
@@ -23,14 +24,14 @@ def get_minimum_year():
     """
     basepath = os.environ['BASEPATH']
 
-    response = open(basepath+'address.csv')
+    response = open(basepath+'address.csv', encoding='utf-8-sig')
     reader = csv.DictReader(response)
     years = [int(Converter.str_to_float(item['BeginDate'])) for item in reader if item['BeginDate'] != '']
     nozeros = [number for number in years if (number != 0 and number != -1)]
     minyeara = np.amin(nozeros)
     print("\n\nMinimum year in address is: " + str(minyeara))
 
-    response = open(basepath+'constituents.csv')
+    response = open(basepath+'constituents.csv', encoding='utf-8-sig')
     reader = csv.DictReader(response)
     years = [int(Converter.str_to_float(item['BeginDate'])) for item in reader if item['BeginDate'] != '']
     nozeros = [number for number in years if (number != 0 and number != -1)]

@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import csv
 import os
@@ -20,7 +21,7 @@ def generate_base_locations():
     Saves in latlons.txt and heights.txt
     """
     basepath = os.environ['BASEPATH']
-    response = open(basepath+'address.csv')
+    response = open(basepath+'address.csv', encoding='utf-8-sig')
     print("\n\nloaded " + basepath + "address.csv")
     reader = csv.DictReader(response)
     location_pattern = re.compile("(\-?\d+(\.\d+)?)\s*,\s*(\-?\d+(\.\d+)?).*")
