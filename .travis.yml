@@ -22,8 +22,7 @@ deploy:
   edge: true
   cache_control: max-age=0
   access_key_id: AKIAT6VUAOZSIK73VAUA
-  secret_access_key:
-    secure: "fZCQkPl5cH35ABBqddvXyHSv8tAIAUGcX82aChfjaD5A0y3/Os5z12vzOKv/Er4NosA+4iWAFl0JMQgfW9yhb0nRhg38jByVq7KqPblbO8ZrliN3jWMPz1sw+6i5xc7CJMGWI4BgOO2nf7d10AilhoTzDA6rVS2yvY35clATe/yMd9Ygb/nOzHehXV/Pk2VDiyWik3FW1o/YOIv2YR8niSMDPvvPdLMLy2RH8aK9AK6lbpRkiNZ+YxRsVvpngnTdUCb7IpA6Nr7FFChs+m0pjNLxnD2BBE0Ss+pqPOhV5gbnLy/CBeAHGjuLRUYBWZPf/xU17ORiaQxkA8P3rNnfWl2fYbajeizoa8Yx1MITcfPVW4IUbXtCzZ17DZHCnXTyxIMzKbuxjqNcSdvrZ08FqS3ej8Fq69C2ocuUNQg5h65gbQpAGbmjSYgRFeqQ/1IKycgS4hLu5Qmem/fLf0t9T2fAbto6syWQDY7AHkCi3h/1JOJJDWM4e5wHXyZCrhfsKis381F8IHnPsDLztqteZy3rbbl+lGSz2fCoBsbGhOv1yB31e8KQOE1fSbEJK42nz/nQrcYBqmsgv8hCwrGvpkh5c7iC4bb3E8eS+5dwG8h8Kx4JX2V7g3SIY50U3QMyG4iJixfXqCe3w7nw20V++TmTovBm10UgqsBbtkoDpMU="
+  secret_access_key: $AWS_SECRET
   bucket: mga-pic-data
   acl: public_read
   on:
