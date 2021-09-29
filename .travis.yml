@@ -14,10 +14,9 @@ notifications:
     - hello@mauriciogiraldo.com
 before_deploy:
 - echo 'Cleaning extraneous files before S3 deploy'
-- rm ./python/*
+- rm -rf ./python/
 - rm README.md
 - rm LICENSE
-- rmdir python
 deploy:
   provider: s3
   edge: true
