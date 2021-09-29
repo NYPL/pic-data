@@ -17,7 +17,6 @@ before_deploy:
 - rm -rf ./python/
 - rm README.md
 - rm LICENSE
-- rm ./csv/*.csv
 deploy:
   provider: pages:git
   edge: true
