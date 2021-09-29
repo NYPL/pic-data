@@ -17,14 +17,12 @@ before_deploy:
 - rm -rf ./python/
 - rm README.md
 - rm LICENSE
+- rm ./csv/*.csv
 deploy:
-  provider: s3
+  provider: pages:git
   edge: true
-  cache_control: max-age=0
-  access_key_id: AKIAT6VUAOZSIK73VAUA
-  secret_access_key: $AWS_SECRET
-  bucket: mga-pic-data
-  acl: public_read
+  token: $GH_PAGES_TOKEN
+  local_dir: ./csv
   on:
     repo: mgiraldo/pic-data
     branch: main
