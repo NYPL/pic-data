@@ -27,4 +27,5 @@ deploy:
   acl: public_read
   on:
     repo: mgiraldo/pic-data
+    branch: main
   skip_cleanup: true
